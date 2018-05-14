@@ -6,7 +6,7 @@
 
      server_port: 3000,
 
-     db_url: 'mongodb://https://shoutmythink.herokuapp.com:27017/local',
+     db_url: 'mongodb://shineb523:831427@ds157641.mlab.com:57641/counseling_platform',
 
      db_schemas: [{
              file: './user_account_schema',
@@ -21,6 +21,20 @@
              specified_collection_name: 'withdrawal_reasons',
              schemaName: 'user_withdrawal_reason_schema',
              modelName: 'user_withdrawal_reason_model'
+         },
+         {
+             file: './counselor_article_schema',
+             collection: 'counselor_articles',
+             specified_collection_name: 'counselor_articles',
+             schemaName: 'counselor_article_schema',
+             modelName: 'counselor_article_model'
+         },
+         {
+             file: './client_article_schema',
+             collection: 'client_articles',
+             specified_collection_name: 'client_articles',
+             schemaName: 'client_article_schema',
+             modelName: 'client_article_model'
          }
      ],
 

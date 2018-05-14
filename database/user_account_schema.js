@@ -111,18 +111,6 @@ Schema.createSchema = function(mongoose) {
         return hashed_password.length;
     }, 'hashed_password 칼럼의 값이 없습니다.');
 
-
-    // 모델 객체에서 사용할 수 있는 메소드 정의
-    user_account_schema.static('findById', function(id, callback) {
-        return this.find({
-            id: id
-        }, callback);
-    });
-
-    user_account_schema.static('findAll', function(callback) {
-        return this.find({}, callback);
-    });
-
     console.log('user_account_schema 정의함.');
 
     return user_account_schema;

@@ -1,25 +1,25 @@
-// 홈 화면
+// Index page.
 module.exports = function(req, res) {
-    console.log('/ 패스 요청됨.');
+    console.log('/ path is called.');
 
     var database = req.app.get('database');
 
     if (database.db) {
-        console.log('데이터베이스 연결 성공.');
+        console.log('Database is successfully connected.');
 
         database.user_account_model.find({
             'withdrawal_boolean':true
         }, function(err, results) {
-            console.log('find 함수 요청됨.');
+            console.log('find function is called.');
             if (err) {
                 console.log(err);
-                console.log('find 함수 호출 중 오류 발생.');
+                console.log('Error is occured while calling find function.');
                 res.redirect('/error');
                 return;
             }
 
             if (results) {
-                console.log('데이터베이스의 탈퇴 처리중인 계정들 : ');
+                console.log('Accounts in the process of withdrawal in database : ');
                 console.dir(results);
 
                 for (var i = 0; i < results.length; i++) {
@@ -35,40 +35,41 @@ module.exports = function(req, res) {
                         if (withdrawal_day_diff >= 14) {
                             database.user_account_model.deleteOne({ 'id':results[i]._doc.id }, function(err, resultObj) {
                                 if (err) {
-                                    console.log('deleteOne 함수 호출 중 오류.');
+                                    console.log('Error is occured while calling deleteOne function.');
                                     throw err;
                                     return;
                                 }
 
-                                console.log('회원탈퇴 2주 경과 데이터베이스 삭제 완료.');
+                                console.log('Deleted accounts which withdrew 2 weeks ago.')
+
                             });
                         }
                     }
                 }
 
             } else {
-                console.log('데이터베이스에 계정이 존재하지 않습니다.');
+                console.log('Withdrawn account does not exist in the database.');
 
             }
 
         });
 
     } else {
-        console.log('데이터베이스 연결 실패.');
+        console.log('Failed to connect to database.');
         res.redirect('/error');
         return;
     }
 
-    console.log('req.user의 정보');
+    console.log('Information from req.user.');
     console.dir(req.user);
 
-    // 인증 안된 경우
+    // Unauthorized case.
     if (!req.user) {
-        console.log('사용자 인증 안된 상태임.');
+        console.log('User is not authenticated.');
         res.redirect('/index_signin');
         return;
     } else {
-        console.log('사용자 인증된 상태임.');
+        console.log('User is authenticated');
 
         req.session.withdrawal_boolean=false;
 
