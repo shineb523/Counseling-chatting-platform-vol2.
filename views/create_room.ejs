@@ -1,0 +1,74 @@
+<!-- 상담 상담 방 생성 페이지 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담 방 생성</title>
+</head>
+
+<body>
+    <h1>상담 방 생성</h1>
+
+    <!--
+        상담 종류
+        상담자 / 내담자
+        방 생성자 아이디
+        방 제목
+     -->
+
+    <form  id="create_room_form" action="/create_room" method="post">
+
+
+        상담 타입
+        <select id="counsel_type" name="counsel_type" >
+            <option value="a" selected="selected">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+        </select>
+
+        방 생성자 타입
+        <select id="room_creator_type" name="room_creator_type" >
+            <option value="counselor" selected="selected">상담자</option>
+            <option value="client">내담자</option>
+        </select>
+
+        생성자
+
+        <span id="creator_id"><%= user.id %></span>
+
+        방 제목
+        <input id="room_title" name="room_title" type="text">
+
+        <input type="submit" value="방 생성">
+
+    </form>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+    (jQuery)(function($) {
+        $('#create_room_form').submit(function(){
+            if($('#room_title').val().length<10){
+                alert('제목을 10자 이상 입력해 주세요');
+                $('#room_title').focus();
+                return false;
+            }
+
+            if($('#room_title').val().length>20){
+                alert('제목을 20자 이하로 입력해 주세요');
+                $('#room_title').focus();
+                return false;
+            }
+        });
+
+
+    });
+</script>
+</html>

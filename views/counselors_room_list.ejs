@@ -1,0 +1,113 @@
+<!-- 상담자들이 생성한 방 목록 페이지 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상담자 방 목록</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상담자 방 목록 -->
+    상담자 방 목록
+    <a href="/counselors_room_list">LOGO_image</a>
+    <a href="/counselors_room_list">상담자</a>
+    <a href="/clients_room_list">내담자</a>
+    <a href="/create_room">방 만들기</a>
+    <a href="/my_profile_counselor">내 프로필</a>
+
+    <hr>
+
+    <table id="room_table">
+
+    </table>
+	<table id="room_table_button">
+	    <tr>
+	        <td><button>prev</button></td>
+	        <td><p id="page_num">0</p></td>
+	        <td><button>next</button></td>
+	    </tr>
+	</table>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+(jQuery)(function($) {
+
+        var host='localhost';
+        var port='3000';
+        var url='http://'+host+':'+port;
+        var options={'forceNew':true};
+        var socket=io.connect(url, options);
+
+        socket.on('connect', function(){
+            console.log('웹 소켓 서버에 연결되었습니다. : '+url);
+        });
+
+        socket.on('disconnect', function(){
+            console.log('웹 소켓 연결이 종료되었습니다.');
+        });
+
+
+
+        socket.emit('request_room_list_counselor');
+
+
+        socket.on('room_list_counselor', function(roomList){
+            console.log('received room list of counselors successfully.');
+
+            var table_making_string='';
+
+            for(var i=0;i<roomList.length;i++){
+
+                var room_list_title;
+
+                if(((roomList[i])['room_title']).length>12){
+                    room_list_title = (roomList[i])['room_title'].substr(0, 12);
+                    room_list_title+='...';
+                    console.log('room_list_title : ', room_list_title);
+                }
+
+                if(i%4==0){
+                    table_making_string+='<tr>';
+                }
+
+                var room_url = '/chatting_room_joined?room_creator_id='+(roomList[i])['room_creator_id'];
+
+                table_making_string+='<td><a href=\"'
+                +room_url
+                +'\">'
+                +room_list_title+'</br>'
+                +(roomList[i])['counsel_type']+' '
+                +'상담자</br>'
+                +(roomList[i])['room_creator_id']+'</br>'
+                +'</a></td>';
+
+                if (i%4==3) {
+                    table_making_string+='</tr>';
+                }
+
+                if(((i%4)!=3)&&(i==(roomList.length-1))){
+                    table_making_string+='</tr>';
+                }
+
+            }
+            console.log('table_making_string : ', table_making_string);
+            $('#room_table').append(table_making_string);
+
+        });
+
+
+
+});
+</script>
+</html>
