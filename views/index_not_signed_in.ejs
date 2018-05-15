@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style>
+        /* Extra small devices (portrait phones, 375px and up) */
+        @media (max-width: 319.98px){
+            #brand_logo {
+                width: 90%;
+                height: 89px;
+                margin-top: 4px;
+                margin-bottom: 0px;
+            }
+            ul{
+                margin-bottom: 2px;
+                margin-top: 5px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+        /* Extra small devices (portrait phones, 320px and up) */
+        @media (min-width: 320px) and (max-width: 375px){
+            #brand_logo {
+                width: 292px;
+                height: 82px;
+                margin-top: 7px;
+                margin-bottom: 0px;
+            }
+            ul{
+                margin-bottom: 2px;
+                margin-top: 5px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+        /* Extra small devices (portrait phones, 375px and up) */
+        @media (min-width: 375px) and (max-width: 424.98px) {
+            #brand_logo {
+                width: 319px;
+                height: 89px;
+                margin-top: 7px;
+                margin-bottom: 0px;
+            }
+            ul{
+                margin-bottom: 2px;
+                margin-top: 5px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Small devices (landscape phones, 425px and up) */
+        @media (min-width: 425px) and (max-width: 767.98px) {
+            #brand_logo {
+                width: 359px;
+                height: 96px;
+                margin-top: 7px;
+                margin-bottom: 0px;
+            }
+            ul{
+                margin-bottom: 2px;
+                margin-top: 5px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            #brand_logo {
+                width: 220px;
+                height: 90px;
+                margin-top: 10px;
+                margin-bottom: 7px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+            }
+            #content {
+                display: flex;
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                padding-left: 0px;
+                padding-right: 11px;
+            }
+            ul{
+                padding-left: 35px;
+            }
+            main {
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #brand_logo {
+                width: 300px;
+                height: 100px;
+                margin-top: 12px;
+                margin-bottom: 10px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+            }
+            #content {
+                display: flex;
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                padding-left: 0px;
+                padding-right: 16px;
+            }
+            main {
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) and (max-width: 2559.98px){
+            #brand_logo {
+                width: 400px;
+                height: 120px;
+                margin-top: 10px;
+                margin-bottom: 12px;
+
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+            }
+            #content {
+                display: flex;
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                padding-left: 0px;
+                padding-right: 34px;
+            }
+            main {
+            }
+        }
+
+        /* Extra large devices (super desktops, 2560px and up) */
+        @media (min-width: 2560px) {
+            #brand_logo {
+                width: 450px;
+                height: 120px;
+                margin-top: 46px;
+                margin-bottom: 40px;
+            }
+            #outermost_container {
+                display: flex;
+                flex-direction: column;
+            }
+            #content {
+                display: flex;
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                padding-left: 0px;
+                padding-right: 34px;
+            }
+            main {
+            }
+        }
+
+        /* No media query since the extra-large breakpoint has no upper bound on its width */
+    </style>
+    <title>Brand name</title>
+</head>
+
+<body>
+    <div id="outermost_container">
+        <header>
+            <a href="/"><img id="brand_logo" src="../public/img/temporary_logo.jpg" alt="brand_logo" title="brand_logo"></a>
+        </header>
+        <div id="content">
+            <nav>
+                <ul>
+                    <li><a href="/counselors_list">Counselors</a></li>
+                    <li><a href="/clients_list">Clients</a></li>
+                    <li><a id="signin_link" href="/sign_in_page">sign-in</a></li>
+                    <li><a id="signup_link" href="/signup_account_creation">sign-up</a></li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia molestiae distinctio asperiores optio aliquam sint explicabo, sit assumenda natus amet, autem, numquam dolor omnis impedit error recusandae magni alias, dolorum ratione nesciunt reprehenderit. Voluptatibus, error! Possimus dolorem veritatis debitis, labore ratione similique sit nesciunt, libero architecto alias beatae eum quasi, quo quae aspernatur dolores quos consequuntur quam error dignissimos accusantium. Nam nemo sint quod earum fugit minima quas omnis voluptatum! Est nesciunt, aut aliquam ratione adipisci non eos sed maiores voluptas mollitia praesentium illo assumenda perspiciatis magnam. Dolorum perferendis quod officiis dolores qui architecto animi laboriosam voluptatibus quas, corrupti aspernatur, doloribus hic minus inventore, est consequatur ipsa! Obcaecati nam, eum impedit nesciunt temporibus distinctio, doloribus, maxime incidunt assumenda porro iure blanditiis. Amet culpa fugit temporibus dolor saepe dolorem eveniet architecto, quibusdam, eum non ipsa consequuntur quis quo hic, expedita ea et suscipit sunt delectus voluptatibus! Optio, quaerat, saepe. Corporis ab, alias et saepe eligendi culpa similique repellat, necessitatibus explicabo maxime facilis consectetur unde architecto totam magni placeat accusantium, enim natus! Ad similique ea perferendis sed iure magnam rem facilis natus corporis eligendi magni, fuga ipsa ratione aspernatur dolores asperiores consectetur dicta. Illo error dicta, rerum dolore excepturi est non sint vel, quasi recusandae optio in numquam fugiat, eveniet facilis perspiciatis nostrum esse beatae porro perferendis accusamus sequi voluptate. Culpa nihil nostrum neque obcaecati inventore quis, eos voluptate dignissimos laboriosam et, amet possimus, fuga ipsa id numquam, tempora non repellat. Iste ratione laboriosam accusamus neque aliquam quisquam nemo impedit, excepturi voluptatum corrupti obcaecati distinctio harum reiciendis sint, ex. Cupiditate suscipit animi nesciunt hic eos odio deleniti nemo ab sunt deserunt rem et nihil aut itaque, nobis sequi neque delectus eius voluptatibus error quaerat, mollitia fugit. Eos vitae eligendi sint doloremque excepturi eius laboriosam, voluptatum dolorum soluta blanditiis doloribus dolorem deserunt voluptas animi iusto vel quam voluptatem modi culpa! Quas eveniet saepe, quo eligendi officia esse non in sequi! Natus fugiat minima deserunt facilis, ut eveniet perferendis, facere minus reiciendis quae hic, aut dolore optio. Eius aspernatur, delectus consequatur ea, voluptate eligendi sit rem, minus alias ipsam eos. Mollitia, eum corrupti illo dicta esse qui sed reiciendis expedita molestias molestiae, nam omnis vitae! Soluta beatae ducimus nostrum necessitatibus labore ipsam magni libero molestiae, enim, at placeat temporibus reiciendis, distinctio voluptate tempore doloribus fugiat similique, neque quis. Dicta incidunt deleniti assumenda. Unde reiciendis possimus tempore itaque asperiores a rem in laboriosam quidem, voluptas expedita error fuga vel tempora neque magnam consequatur iste eum quia ex modi doloribus quo! Dolorem nesciunt vero, dolorum iusto voluptatum at! Ratione, dicta. Velit iure nemo architecto molestiae qui error dicta iusto incidunt? Modi nostrum totam dolore atque vitae cum quasi repudiandae magnam, et velit rem obcaecati voluptate porro quidem earum tenetur nobis harum voluptatibus dignissimos labore odio adipisci sequi veritatis aspernatur. Officia maiores libero asperiores unde dolorem beatae, facere accusamus et minima consequatur aut excepturi labore adipisci fugit tenetur eligendi in rem quas, placeat veniam? Facilis aliquid, aliquam libero magnam aperiam incidunt, eius inventore non, reiciendis voluptate ea voluptatem eaque. Officiis eos nesciunt exercitationem reiciendis qui sed. Ad minus accusamus qui aspernatur quae magnam quam cumque consequuntur non. Esse asperiores voluptatibus perferendis doloribus similique sint veniam autem optio maiores iste reprehenderit libero enim tempora, ratione, hic, reiciendis dolorum. Ullam, quaerat nemo laboriosam aut nulla! Quam minima temporibus at expedita, pariatur? Quas quo voluptate sit aperiam dignissimos labore, consequatur repellat aliquid tempore sint eius cupiditate commodi eos nisi quod nihil voluptatum est quis iste repellendus laudantium maiores repudiandae! Voluptatibus recusandae dignissimos molestias sapiente inventore alias velit architecto, dolorem corporis ex at, ratione cumque, natus deleniti hic illum eos! A itaque quos illum architecto mollitia eos consectetur molestias, et similique possimus facilis aut in deleniti iste ex quibusdam, eum, non? Quae ad, quis eius, corrupti inventore at dolores perferendis possimus quibusdam nobis pariatur sequi, ut dolorem animi. Eos rerum omnis iusto sed harum blanditiis repudiandae obcaecati eaque amet! Dolores nostrum tenetur laboriosam nihil odio soluta temporibus eum beatae veniam, iste, id ipsam in praesentium quo ea voluptate libero eos similique dolorem sapiente quam, voluptatum error veritatis cum cupiditate. Modi libero quam beatae at alias numquam asperiores voluptates, voluptatem tempora voluptatibus possimus non, nobis corporis dolor natus cum sint autem porro impedit unde. Quis laboriosam aut rerum ex nihil optio aliquam! Commodi libero enim minus repellendus, quibusdam magni alias ratione nihil, dolor placeat praesentium excepturi necessitatibus voluptate maiores, consequuntur nisi suscipit, nulla labore dolore ipsum fugit voluptas. Ipsum corporis cumque ipsam excepturi, aperiam quas placeat nulla, quod necessitatibus voluptates quo omnis, minus repellat fugit. Dolores consequatur quam reiciendis molestias nulla, sapiente accusantium ipsum exercitationem obcaecati maxime, soluta corrupti expedita recusandae praesentium voluptatum labore magnam aperiam doloremque laudantium amet modi nostrum hic. Amet praesentium, earum sit quibusdam voluptate nemo iusto, nobis velit incidunt cupiditate doloribus ducimus nihil dolore expedita repellat quod sequi dicta fugiat ullam provident voluptates impedit. Optio, inventore. Ipsam reiciendis harum itaque tempora officia, sunt quia quod nobis delectus error nisi natus eos quis dolores sit architecto voluptates voluptatum. Cupiditate a odio corporis, ea quo soluta minima nulla consequuntur laborum fugit. Explicabo iste ea, cumque perferendis ab nisi animi, nam culpa ex deleniti officia vero iusto recusandae, provident consequuntur nihil, veniam? Quidem sequi, eveniet harum, repellat voluptate magni maxime soluta consectetur laborum, architecto alias, maiores ea eligendi ratione animi. Deleniti dolorum expedita vitae molestiae aliquam neque, ipsam consectetur dolor similique odit et, enim ipsa, quia incidunt saepe facilis earum veniam inventore fuga magni. Hic non eligendi dolor iste facere quibusdam velit saepe facilis doloribus debitis quidem aliquam quis ea ut adipisci placeat odio, voluptates. Incidunt ratione voluptate, porro inventore tenetur a expedita necessitatibus ex alias quos maiores architecto tempore perferendis tempora at fugiat neque labore. Reiciendis ab, asperiores, minus quos deserunt suscipit quaerat! Pariatur, maiores tempora odio architecto culpa, quo fugit dolor ad earum. Voluptate repellat voluptatibus ad dolore quisquam. Reprehenderit aut nam tempore at libero asperiores, veniam aliquid dolor atque sit explicabo distinctio eligendi error accusantium, ut. Esse repudiandae cumque quibusdam, consectetur vitae aperiam perspiciatis expedita. Ratione, accusamus, eius.
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+
+</html>

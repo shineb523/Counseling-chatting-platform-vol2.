@@ -66,7 +66,7 @@ module.exports = function(req, res) {
     // Unauthorized case.
     if (!req.user) {
         console.log('User is not authenticated.');
-        res.redirect('/index_signin');
+        res.redirect('/index_not_signed_in');
         return;
     } else {
         console.log('User is authenticated');

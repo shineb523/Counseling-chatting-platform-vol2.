@@ -8,7 +8,7 @@ module.exports = function(req, res) {
             return;
     }
 
-    console.log('/index_signin 패스 요청됨.');
-    res.render('index_signin.ejs');
+    console.log('/index_not_signed_in 패스 요청됨.');
+    res.render('index_not_signed_in.ejs');
     return;
 }
