@@ -40,13 +40,23 @@
 
      route_info: [
          {
-             method_file_path: '../routes/route_files/home_get',
+             method_file_path: '../routes/route_files/index_page_get',
              path: '/',
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/index_not_signed_in_get',
-             path: '/index_not_signed_in',
+             method_file_path: '../routes/route_files/index_not_signed_in_page_get',
+             path: '/index_not_signed_in_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/index_signed_in_page_get',
+             path: '/index_signed_in_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/error_page_get',
+             path: '/error_page',
              type: 'get'
          }
 

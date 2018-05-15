@@ -1,4 +1,4 @@
-// 회원탈퇴 선택 시, 회원탈퇴 사유 제출 페이지로 이동
+// Index_page when user is not signed in.
 module.exports = function(req, res) {
 
     console.log('req.session', req.session);
@@ -8,7 +8,7 @@ module.exports = function(req, res) {
             return;
     }
 
-    console.log('/index_not_signed_in 패스 요청됨.');
+    console.log('/index_not_signed_in path is called.');
     res.render('index_not_signed_in.ejs');
     return;
 }

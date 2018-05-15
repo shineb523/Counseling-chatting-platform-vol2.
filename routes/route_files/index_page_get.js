@@ -56,7 +56,7 @@ module.exports = function(req, res) {
 
     } else {
         console.log('Failed to connect to database.');
-        res.redirect('/error');
+        res.redirect('/error_page');
         return;
     }
 
@@ -66,7 +66,7 @@ module.exports = function(req, res) {
     // Unauthorized case.
     if (!req.user) {
         console.log('User is not authenticated.');
-        res.redirect('/index_not_signed_in');
+        res.redirect('/index_not_signed_in_page');
         return;
     } else {
         console.log('User is authenticated');
@@ -76,11 +76,11 @@ module.exports = function(req, res) {
         console.log('req.session', req.session);
 
         if(req.session.withdrawal_boolean==true){
-                res.redirect('/already_withdrawn_account');
+                res.redirect('/already_withdrawn_account_page');
                 return;
         }
 
-        res.redirect('/counselors_room_list');
+        res.redirect('/index_signed_in_page');
         return;
     }
 
