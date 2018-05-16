@@ -44,7 +44,7 @@ module.exports = function(app, router, passport) {
 
 	// 로그인 인증 라우터 설정
 	router.route('/login').post(passport.authenticate('local-login', {
-	    failureRedirect: '/signin_failed_authentication'
+	    failureRedirect: '/signin_failed_page_get'
 	}), function(req, res){
 		if(req.user.withdrawal_boolean==true){
 
@@ -85,7 +85,7 @@ module.exports = function(app, router, passport) {
 
 			res.render('already_withdrawn_account.ejs', { user: req.user, withdrawal_time_remaining: withdrawal_time_remaining_result});
 		}else{
-			res.redirect('/counselors_room_list');
+			res.redirect('/index_signed_in_page');
 		}
 	});
 

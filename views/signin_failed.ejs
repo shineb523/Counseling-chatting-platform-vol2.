@@ -31,10 +31,6 @@
                 display: flex;
                 flex-direction: column;
             }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
-            }
             #user_password_input{
                 margin-bottom: 15px;
             }
@@ -64,10 +60,6 @@
             #signin_form{
                 display: flex;
                 flex-direction: column;
-            }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
             }
             #user_password_input{
                 margin-bottom: 15px;
@@ -99,10 +91,6 @@
                 display: flex;
                 flex-direction: column;
             }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
-            }
             #user_password_input{
                 margin-bottom: 20px;
             }
@@ -132,10 +120,6 @@
             #signin_form{
                 display: flex;
                 flex-direction: column;
-            }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
             }
             #user_password_input{
                 margin-bottom: 10px;
@@ -167,10 +151,6 @@
                 display: flex;
                 flex-direction: column;
             }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
-            }
             #user_password_input{
                 margin-bottom: 10px;
             }
@@ -201,10 +181,6 @@
                 display: flex;
                 flex-direction: column;
             }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
-            }
             #user_password_input{
                 margin-bottom: 10px;
             }
@@ -234,10 +210,6 @@
             #signin_form{
                 display: flex;
                 flex-direction: column;
-            }
-            #signin_error{
-                display: inline-block;
-                margin-bottom: 10px;
             }
             #user_password_input{
                 margin-bottom: 10px;
@@ -271,7 +243,6 @@
             }
             #signin_error{
                 display: inline-block;
-                margin-bottom: 10px;
             }
             #user_password_input{
                 margin-bottom: 10px;
@@ -292,7 +263,7 @@
         <div id="title">Sign-in</div>
         <div id="signin_box">
             <form id="signin_form" method="post" action="/signin">
-                <div id="signin_error">Confirm your ID or PASSWORD</div>
+                <div id="signin_error"></div>
                 <input id="user_id_input" name="user_id" type="text" placeholder="ID">
                 <input id="user_password_input" name="user_password" type="password" placeholder="PASSWORD">
                     <button id="local_signin_button" type="submit">sign-in</button>
