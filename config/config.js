@@ -55,6 +55,21 @@
              type: 'get'
          },
          {
+             method_file_path: '../routes/route_files/signin_page_get',
+             path: '/signin_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/signin_failed_page_get',
+             path: '/signin_failed_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/logout_get',
+             path: '/logout',
+             type: 'get'
+         },
+         {
              method_file_path: '../routes/route_files/error_page_get',
              path: '/error_page',
              type: 'get'

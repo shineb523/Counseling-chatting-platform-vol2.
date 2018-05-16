@@ -1,8 +1,9 @@
-// 로그아웃 요청 시, 로그아웃 처리 후 홈으로 이동.
+// If logout is called, log out and redirect to index_page_get.
+
 module.exports = function(req, res) {
-    console.log('/logout 패스 요청됨.');
+    console.log('/logout path is called.');
     req.session.destroy();
     res.clearCookie();
-    res.render('index_signin.ejs');
+    res.redirect('/');
     return;
 }
