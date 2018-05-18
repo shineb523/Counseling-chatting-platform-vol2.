@@ -60,6 +60,11 @@
              type: 'get'
          },
          {
+             method_file_path: '../routes/route_files/signup_page_get',
+             path: '/signup_page',
+             type: 'get'
+         },
+         {
              method_file_path: '../routes/route_files/signin_failed_page_get',
              path: '/signin_failed_page',
              type: 'get'
