@@ -43,8 +43,8 @@ module.exports = function(app, router, passport) {
     console.log('2가지 passport 인증방식 설정됨.');
 
 	// 로그인 인증 라우터 설정
-	router.route('/login').post(passport.authenticate('local-login', {
-	    failureRedirect: '/signin_failed_page_get'
+	router.route('/signin').post(passport.authenticate('local-login', {
+	    failureRedirect: '/signin_failed_page'
 	}), function(req, res){
 		if(req.user.withdrawal_boolean==true){
 

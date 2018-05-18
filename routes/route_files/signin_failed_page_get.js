@@ -2,6 +2,6 @@
 module.exports = function(req, res) {
 
     console.log('/signin_failed_page path is called.');
-    res.render('signin_failed.ejs');
+    res.render('index_signin_failed.ejs');
     return;
 }
