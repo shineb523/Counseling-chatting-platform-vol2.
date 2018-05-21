@@ -60,13 +60,13 @@
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/signup_page_get',
-             path: '/signup_page',
+             method_file_path: '../routes/route_files/signin_fail_page_get',
+             path: '/signin_fail_page',
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/signin_fail_page_get',
-             path: '/signin_fail_page',
+             method_file_path: '../routes/route_files/signup_page_get',
+             path: '/signup_page',
              type: 'get'
          },
          {
@@ -75,8 +75,8 @@
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/signup_account_creation_page_get',
-             path: '/signup_account_creation_page',
+             method_file_path: '../routes/route_files/signup_success_page_get',
+             path: '/signup_success_page',
              type: 'get'
          },
          {
