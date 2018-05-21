@@ -65,8 +65,8 @@
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/signin_failed_page_get',
-             path: '/signin_failed_page',
+             method_file_path: '../routes/route_files/signin_fail_page_get',
+             path: '/signin_fail_page',
              type: 'get'
          },
          {

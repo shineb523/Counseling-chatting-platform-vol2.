@@ -39,13 +39,16 @@
                 margin-bottom: 9px;
             }
             #signin_user_password_div{
-                margin-bottom: 34px;
+                margin-bottom: 15px;
+            }
+            #signin_fail_message {
+                font-size: 15px;
             }
             #home, #find_account{
                 text-align: center;
             }
             #find_account{
-                margin-top: 30px;
+                margin-top: 21px;
             }
         }
 
@@ -79,7 +82,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 16px;
             }
             #home, #find_account{
                 text-align: center;
@@ -119,7 +122,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 15px;
             }
             #home, #find_account{
                 text-align: center;
@@ -159,7 +162,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 15px;
             }
             #home, #find_account{
                 text-align: center;
@@ -199,7 +202,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 15px;
             }
             #home, #find_account{
                 text-align: center;
@@ -239,7 +242,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 15px;
             }
             #home, #find_account{
                 text-align: center;
@@ -279,7 +282,7 @@
                 margin-bottom: 11px;
             }
             #signin_user_password_div{
-                margin-bottom: 31px;
+                margin-bottom: 15px;
             }
             #home, #find_account{
                 text-align: center;
@@ -319,7 +322,11 @@
                 margin-bottom: 9px;
             }
             #signin_user_password_div{
-                margin-bottom: 28px;
+                margin-bottom: 15px;
+            }
+            #signin_fail_message{
+                font-weight: 700;
+                text-align: center;
             }
             #home, #find_account{
                 text-align: center;
@@ -327,6 +334,10 @@
             #find_account{
                 margin-top: 23px;
             }
+        }
+        #signin_fail_message{
+            font-weight: 700;
+            text-align: center;
         }
 
         /* No media query since the extra-large breakpoint has no upper bound on its width */
@@ -347,6 +358,9 @@
                     <div id="signin_user_password_div" class="form-group">
                         <label for="signin_user_password">PASSWORD</label>
                         <input id="signin_user_password" class="form-control" type="password" name="signin_user_password">
+                    </div>
+                    <div id="signin_fail_message" class="alert alert-danger">
+                        Confirm your ID or PASSWORD
                     </div>
                         <button id="local_signin_button" class="btn btn-outline-secondary" type="submit">sign-in</button>
                         <button id="google_signin_button" >google sign-in</button>

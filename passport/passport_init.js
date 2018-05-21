@@ -44,7 +44,7 @@ module.exports = function(app, router, passport) {
 
 	// 로그인 인증 라우터 설정
 	router.route('/signin').post(passport.authenticate('local-login', {
-	    failureRedirect: '/signin_failed_page'
+	    failureRedirect: '/signin_fail_page'
 	}), function(req, res){
 		if(req.user.withdrawal_boolean==true){
 
