@@ -1,53 +1,296 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>회원가입 완료</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style>
-        #outermost_box{
-            margin-top: 20%;
-        }
-        #card_title{
-            font-size: 2.6rem;
-            font-weight: 600;
-            margin-top: 50px;
-            margin-bottom: 60px;
-        }
-        #card_text{
-            font-size: 20px;
-        }
-        #home_button{
-            margin-top: 70px;
-            margin-bottom: 50px;
-            width: 200px;
-        }
-    </style>
-  </head>
-  <body>
-      <div id="outermost_box" class="card text-center">
-          <div id="card_body" class="card-body">
-            <h5 id="card_title" class="card-title">회원가입 완료</h5>
-            <p id="card_text" class="card-text"><%= user.id %>님 환영합니다.</p>
-            <a id="home_button" href="/" class="btn btn-primary">홈으로</a>
-          </div>
-      </div>
+        /* Extra small devices (portrait phones, 375px and up) */
 
+        @media (max-width: 319.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 128px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 119px;
+            }
+            #message{
+                font-size: 64px;
+                margin-top: 138px;
+                margin-bottom: 157px;
+            }
+            #home_link{
+                height: 101px;
+                width: 236px;
+                font-size: 55px;
+                align-self: center;
+                line-height: 81px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Extra small devices (portrait phones, 320px and up) */
+
+        @media (min-width: 320px) and (max-width: 374.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 128px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 119px;
+            }
+            #message{
+                font-size: 64px;
+                margin-top: 138px;
+                margin-bottom: 157px;
+            }
+            #home_link{
+                height: 101px;
+                width: 236px;
+                font-size: 55px;
+                align-self: center;
+                line-height: 81px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Extra small devices (portrait phones, 375px and up) */
+
+        @media (min-width: 375px) and (max-width: 424.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 128px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 119px;
+            }
+            #message{
+                font-size: 64px;
+                margin-top: 138px;
+                margin-bottom: 157px;
+            }
+            #home_link{
+                height: 101px;
+                width: 236px;
+                font-size: 55px;
+                align-self: center;
+                line-height: 81px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Small devices (landscape phones, 425px and up) */
+
+        @media (min-width: 425px) and (max-width: 767.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 128px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 119px;
+            }
+            #message{
+                font-size: 64px;
+                margin-top: 138px;
+                margin-bottom: 157px;
+            }
+            #home_link{
+                height: 101px;
+                width: 236px;
+                font-size: 55px;
+                align-self: center;
+                line-height: 81px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 86px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 50px;
+            }
+            #message{
+                font-size: 24px;
+                margin-top: 57px;
+                margin-bottom: 59px;
+            }
+            #home_link{
+                height: 42px;
+                width: 92px;
+                font-size: 20px;
+                align-self: center;
+                line-height: 23px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 68px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 34px;
+            }
+            #message{
+                font-size: 18px;
+                margin-top: 44px;
+                margin-bottom: 45px;
+            }
+            #home_link{
+                height: 32px;
+                width: 70px;
+                font-size: 16px;
+                align-self: center;
+                line-height: 18px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+
+        @media (min-width: 1200px) and (max-width: 2559.98px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 68px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 34px;
+            }
+            #message{
+                font-size: 18px;
+                margin-top: 44px;
+                margin-bottom: 45px;
+            }
+            #home_link{
+                height: 32px;
+                width: 70px;
+                font-size: 16px;
+                align-self: center;
+                line-height: 18px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+        }
+
+        /* Extra large devices (super desktops, 2560px and up) */
+
+        @media (min-width: 2560px) {
+            #signup_success_box{
+                display: flex;
+                flex-direction: column;
+                margin-top: 68px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+                text-align: center;
+            }
+            #title{
+                font-size: 34px;
+            }
+            #message{
+                font-size: 18px;
+                margin-top: 44px;
+                margin-bottom: 45px;
+            }
+            #home_link{
+                height: 32px;
+                width: 70px;
+                font-size: 16px;
+                align-self: center;
+                line-height: 18px;
+            }
+            #title, #message{
+                text-align: center;
+            }
+
+        }
+
+        /* No media query since the extra-large breakpoint has no upper bound on its width */
+    </style>
+    <title>Sign-up success</title>
+</head>
+
+<body>
+        <div id="signup_success_box">
+            <span id="title">Sign up success!</span>
+            <span id="message">Welcome, <%= user.id %>!</span>
+            <a id="home_link" href="/" class="btn btn-primary">Home</a>
+        </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script>
-        (jQuery)(function($) {
+    (jQuery)(function($) {
 
-        });
+    });
     </script>
-  </body>
+</body>
+
 </html>

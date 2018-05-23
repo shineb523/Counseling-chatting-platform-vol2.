@@ -1,9 +1,9 @@
 // 회원탈퇴 선택 시, 회원탈퇴 사유 제출 페이지로 이동
 module.exports = function(req, res) {
 
-    // 인증 안된 경우
+    // Not signed in.
     if (!req.user) {
-        console.log('사용자 인증 안된 상태임.');
+        console.log('User is not signed in.');
         res.redirect('/index_signin');
         return;
     }
@@ -11,7 +11,7 @@ module.exports = function(req, res) {
     console.log('req.session', req.session);
 
     if(req.session.withdrawal_boolean==true){
-            res.redirect('/already_withdrawn_account');
+            res.redirect('/already_withdrawn_account_page');
             return;
     }
 

@@ -1,7 +1,7 @@
-// 회원가입 성공 시, 회원가입 환영 페이지로 이동과 동시에 가입자 모델객체 전달.
+// If a user signup successfully, render signup_success.ejs with object of user.
 module.exports = function(req, res) {
 
-    console.log('/signup_success_page 패스 요청됨.');
+    console.log('/signup_success_page path is called.');
     res.render('signup_success.ejs', {
         user: req.user
     });

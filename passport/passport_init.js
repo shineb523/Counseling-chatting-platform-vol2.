@@ -91,7 +91,7 @@ module.exports = function(app, router, passport) {
 
 	// 회원가입 라우터 설정
 	router.route('/signup').post(passport.authenticate('local-signup', {
-	    successRedirect: '/signup_success',
+	    successRedirect: '/signup_success_page',
 	    failureRedirect: '/'
 	}));
 

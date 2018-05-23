@@ -65,11 +65,11 @@ module.exports = function(req, res) {
 
     // Unauthorized case.
     if (!req.user) {
-        console.log('User is not authenticated.');
+        console.log('User is not signed in.');
         res.redirect('/index_not_signed_in_page');
         return;
     } else {
-        console.log('User is authenticated');
+        console.log('User is signed in.');
 
         req.session.withdrawal_boolean=false;
 
