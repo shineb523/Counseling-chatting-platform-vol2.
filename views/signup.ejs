@@ -10,399 +10,439 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title></title>
     <style>
-    /* Extra small devices (portrait phones, 375px and up) */
+        /* Extra small devices (portrait phones, 375px and up) */
 
-    @media (max-width: 319.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (max-width: 319.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Extra small devices (portrait phones, 320px and up) */
+        /* Extra small devices (portrait phones, 320px and up) */
 
-    @media (min-width: 320px) and (max-width: 374.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 320px) and (max-width: 374.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Extra small devices (portrait phones, 375px and up) */
+        /* Extra small devices (portrait phones, 375px and up) */
 
-    @media (min-width: 375px) and (max-width: 424.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 375px) and (max-width: 424.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Small devices (landscape phones, 425px and up) */
+        /* Small devices (landscape phones, 425px and up) */
 
-    @media (min-width: 425px) and (max-width: 767.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 425px) and (max-width: 767.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Medium devices (tablets, 768px and up) */
+        /* Medium devices (tablets, 768px and up) */
 
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Large devices (desktops, 992px and up) */
+        /* Large devices (desktops, 992px and up) */
 
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Extra large devices (large desktops, 1200px and up) */
+        /* Extra large devices (large desktops, 1200px and up) */
 
-    @media (min-width: 1200px) and (max-width: 2559.98px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 1200px) and (max-width: 2559.98px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* Extra large devices (super desktops, 2560px and up) */
+        /* Extra large devices (super desktops, 2560px and up) */
 
-    @media (min-width: 2560px) {
-        #signup_form{
-            display: flex;
-            flex-direction: column;
-            width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 49px;
+        @media (min-width: 2560px) {
+            #signup_form {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 49px;
+            }
+            #signup_title {
+                text-align: center;
+                margin-bottom: 18px;
+                font-size: 75px;
+            }
+            #signup_user_id_div,
+            #signup_user_password_div {
+                margin-bottom: 0px;
+            }
+            #signup_user_password_confirm_div {
+                margin-bottom: 1px;
+            }
+            #signup_user_email_box {
+                margin-bottom: 20px;
+            }
+            .mb-3 {
+                margin-bottom: 5px !important;
+            }
+            #signup_user_email_confirm_code_box {
+                margin-bottom: 33px;
+            }
+            #signup_user_email_confirm_code_feedback{
+                visibility: hidden;
+            }
+            #signup_submit_button {
+                margin-bottom: 23px;
+            }
+            span {
+                margin-bottom: 17px;
+            }
+            span,
+            a {
+                align-self: center;
+            }
+            #signin_link {
+                margin-left: 6px;
+                margin-bottom: 9px;
+            }
+            #home_link {
+                margin-bottom: 100px;
+            }
         }
-        #signup_title {
-            text-align: center;
-            margin-bottom: 18px;
-            font-size: 75px;
-        }
-        #signup_user_id_div, #signup_user_password_div{
-            margin-bottom: 0px;
-        }
-        #signup_user_password_confirm_div{
-            margin-bottom: 1px;
-        }
-        #signup_user_email_box {
-            margin-bottom: 20px;
-        }
-        .mb-3 {
-            margin-bottom: 5px !important;
-        }
-        #signup_user_email_confirm_code_box{
-            margin-bottom: 47px;
-        }
-        #signup_submit_button{
-            margin-bottom: 23px;
-        }
-        span{
-            margin-bottom: 17px;
-        }
-        span, a{
-            align-self: center;
-        }
-        #signin_link{
-            margin-left: 6px;
-            margin-bottom: 9px;
-        }
-        #home_link{
-            margin-bottom: 100px;
-        }
-    }
 
-    /* No media query since the extra-large breakpoint has no upper bound on its width */
+        /* No media query since the extra-large breakpoint has no upper bound on its width */
     </style>
 </head>
 
@@ -426,25 +466,26 @@
         </div>
 
         <div id="signup_user_email_box">
-        <label for="signup_user_email">Email</label>
-        <div class="input-group mb-3">
-          <input id="signup_user_email" name="signup_user_email_confirm_code" class="form-control" type="email" placeholder="Enter email" aria-label="Enter email" aria-describedby="emailHelp">
-          <div class="input-group-append">
-            <button id="email_code_send_button" class="btn btn-outline-secondary" type="button">Send code</button>
-          </div>
-        </div>
-        <small id="emailHelp" class="form-text text-muted">Your Email will be used to find account.</small>
+            <label for="signup_user_email">Email</label>
+            <div class="input-group mb-3">
+                <input id="signup_user_email" name="signup_user_email_confirm_code" class="form-control" type="email" placeholder="Enter email" aria-label="Enter email" aria-describedby="emailHelp">
+                <div class="input-group-append">
+                    <button id="email_code_send_button" class="btn btn-outline-secondary" type="button">Send code</button>
+                </div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">Your Email will be used to find account.</small>
         </div>
 
         <div id="signup_user_email_confirm_code_box">
-        <label for="signup_user_email_confirm_code">Email confirm code</label>
-        <div class="input-group mb-3">
-          <input id="signup_user_email_confirm_code" name="signup_user_email_confirm_code" class="form-control" type="email" placeholder="Enter code" aria-label="Enter code" aria-describedby="codeHelp">
-          <div class="input-group-append">
-            <button id="email_code_confirm_button" class="btn btn-outline-secondary" type="button">Confirm code</button>
-          </div>
-        </div>
-        <small id="codeHelp" class="form-text text-muted">Enter code sent to your email.</small>
+            <label for="signup_user_email_confirm_code">Email confirm code</label>
+            <div class="input-group mb-3">
+                <input id="signup_user_email_confirm_code" name="signup_user_email_confirm_code" class="form-control" type="email" placeholder="Enter code" aria-label="Enter code" aria-describedby="codeHelp">
+                <div class="input-group-append">
+                    <button id="email_code_confirm_button" class="btn btn-outline-secondary" type="button">Confirm code</button>
+                </div>
+            </div>
+            <small id="codeHelp" class="form-text text-muted">Enter code sent to your email.</small>
+            <p id="signup_user_email_confirm_code_feedback" >OK</p>
         </div>
 
         <button id="signup_submit_button" type="submit" class="btn btn-outline-secondary">Sign up</button>
@@ -460,283 +501,348 @@
     </script>
     <script>
         (jQuery)(function($) {
-                        $.jsonRPC.setup({
-                            endPoint:'/api',
-                            namespace:''
-                        });
+            $.jsonRPC.setup({
+                endPoint: '/api',
+                namespace: ''
+            });
 
-                        var overlap_check;
+            var overlap_check;
 
-                        // 아이디 검사 정규표현식
-                        var id_pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])([a-zA-z0-9]{5,12})$/;
-                        // 비밀번호 검사 정규표현식
-                        var password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?])([a-zA-Z0-9\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]{10,16})$/;
+            // 아이디 검사 정규표현식
+            var id_pattern = /^(?=.*[a-zA-Z])(?=.*[0-9])([a-zA-z0-9]{5,12})$/;
+            // 비밀번호 검사 정규표현식
+            var password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?])([a-zA-Z0-9\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]{10,16})$/;
 
-                        // 아이디 알파벳 존재 검사 정규표현식
-                        var id_alphabet_pattern = /[a-zA-Z]+/;
-                        // 아이디 숫자 존재 검사 정규표현식
-                        var id_digit_pattern = /[0-9]+/;
-                        // 아이디 길이 검사 정규표현식
-                        var id_length_pattern = /[a-zA-z0-9]{5,12}/;
+            // 아이디 알파벳 존재 검사 정규표현식
+            var id_alphabet_pattern = /[a-zA-Z]+/;
+            // 아이디 숫자 존재 검사 정규표현식
+            var id_digit_pattern = /[0-9]+/;
+            // 아이디 길이 검사 정규표현식
+            var id_length_pattern = /[a-zA-z0-9]{5,12}/;
 
-                        // 비밀번호 소문자 존재 검사 정규표현식
-                        var password_lower_case_alphabet_pattern = /[a-z]+/;
-                        // 비밀번호 대문자 존재 검사 정규표현식
-                        var password_upper_case_alphabet_pattern = /[A-Z]+/;
-                        // 비밀번호 숫자 존재 검사 정규표현식
-                        var password_digit_pattern = /[0-9]+/;
-                        // 비밀번호 특수문자 존재 검사 정규표현식
-                        var password_special_letters_pattern = /[\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]+/;
-                        // 비밀번호 길이 검사 정규표현식
-                        var password_length_pattern = /[a-zA-Z0-9\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]{10,16}/;
+            // 비밀번호 소문자 존재 검사 정규표현식
+            var password_lower_case_alphabet_pattern = /[a-z]+/;
+            // 비밀번호 대문자 존재 검사 정규표현식
+            var password_upper_case_alphabet_pattern = /[A-Z]+/;
+            // 비밀번호 숫자 존재 검사 정규표현식
+            var password_digit_pattern = /[0-9]+/;
+            // 비밀번호 특수문자 존재 검사 정규표현식
+            var password_special_letters_pattern = /[\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]+/;
+            // 비밀번호 길이 검사 정규표현식
+            var password_length_pattern = /[a-zA-Z0-9\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\\\|\[\{\]\}\;\:\'\"\,\<\.\>\/\?]{10,16}/;
 
-                        // 실시간 아이디 필요조건 표시 위한 배열 (콤마 표시를 위해 배열 마지막 요소에 "ok" 추가)
-                        var signup_id_required_arr = ["알파벳", "숫자", "5~15자", "ok"];
-                        // 실시간 비밀번호 필요조건 표시 위한 배열
-                        var signup_password_required_arr = ["대문자 알파벳", "소문자 알파벳", "숫자", "특수문자", "10~16자", "ok"];
+            // 실시간 아이디 필요조건 표시 위한 배열 (콤마 표시를 위해 배열 마지막 요소에 "ok" 추가)
+            var signup_id_required_arr = ["알파벳", "숫자", "5~15자", "ok"];
+            // 실시간 비밀번호 필요조건 표시 위한 배열
+            var signup_password_required_arr = ["대문자 알파벳", "소문자 알파벳", "숫자", "특수문자", "10~16자", "ok"];
 
-                        // 선택 반복 번거로움 해결 위해 자바 스크립트 변수에 할당
-                        var signup_form = $("#signup_form");
-                        var signup_user_id = $("#signup_user_id");
-                        var signup_user_password = $("#signup_user_password");
-                        var signup_user_password_confirm = $("#signup_user_password_confirm");
+            // 선택 반복 번거로움 해결 위해 자바 스크립트 변수에 할당
+            var signup_form = $("#signup_form");
+            var signup_user_id = $("#signup_user_id");
+            var signup_user_password = $("#signup_user_password");
+            var signup_user_password_confirm = $("#signup_user_password_confirm");
 
-                        // 아이디 유효성 검사 (키 누를 때 마다 변경)
-                        signup_user_id.keyup(function() {
+            // 아이디 유효성 검사 (키 누를 때 마다 변경)
+            signup_user_id.keyup(function() {
 
-                            if (id_pattern.test(signup_user_id.val())) {
+                if (id_pattern.test(signup_user_id.val())) {
 
-                                var overlap_check_id=signup_user_id.val();
-                                var id_overlap_check_jsonrpc_method='id_overlap_check';
+                    var overlap_check_id = signup_user_id.val();
+                    var id_overlap_check_jsonrpc_method = 'id_overlap_check';
 
-                                $.jsonRPC.request(id_overlap_check_jsonrpc_method, {
-                                    id:001,
-                                    params:[overlap_check_id],
-                                    success:function(data){
-                                        console.log('jsonRPC success 응답 받음.');
-                                        if(data.result[0]=='o'){
-                                            console.log('아이디 중복 체크 : 이미 아이디가 존재함. 생성 불가능한 아이디.');
-                                            $('#signup_user_id').attr('class', 'form-control is-invalid');
-                                            $("#signup_id_required").attr('class', 'invalid-feedback');
-                                            $("#signup_id_required").text("동일 아이디 존재");
-                                            overlap_check=true;
-
-                                        }else if (data.result[0]=='x') {
-                                            // 아이디 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
-                                            console.log('아이디 중복 체크 : 중복되는 아이디가 존재하지 않음. 생성 가능한 아이디.');
-                                            $('#signup_user_id').attr('class', 'form-control is-valid');
-                                            $("#signup_id_required").attr('class', 'valid-feedback');
-                                            $("#signup_id_required").text("OK");
-
-                                            overlap_check=false;
-                                        }
-
-                                    },
-                                    error:function(data){
-                                        console.log('jsonRPC error 응답 받음.');
-                                        console.log(data.error.code+', '+data.error.message);
-                                        window.location.href='../views/error';
-                                    }
-                                });
-
-
-                            } else {
-                                // 아이디 알파벳 존재 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 알파벳 해당 값 변경
-                                if (id_alphabet_pattern.test(signup_user_id.val()) == false) {
-                                    // 불만족 시 "알파벳"
-                                    signup_id_required_arr[0] = "알파벳";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_id_required_arr[0] = "ok";
-                                }
-                                // 아이디 숫자 존재 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 숫자 해당 값 변경
-                                if (id_digit_pattern.test(signup_user_id.val()) == false) {
-                                    // 불만족 시 "숫자"
-                                    signup_id_required_arr[1] = "숫자";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_id_required_arr[1] = "ok";
-                                }
-                                // 아이디 길이 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 길이 해당 값 변경
-                                if (id_length_pattern.test(signup_user_id.val()) == false) {
-                                    // 불만족 시 "5~15자"
-                                    signup_id_required_arr[2] = "5~15자";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_id_required_arr[2] = "ok";
-                                }
-
-                                // 결과 출력을 위한 문자열을 변수에 할당
-                                var result = "";
-
-                                // 아이디를 입력할 때 마다 아이디 필요조건 배열에서 충족되지 못한 조건 출력
-
-                                // 모든 아이디 필요조건 배열 원소들에 대해
-                                for (var i = 0; i < signup_id_required_arr.length - 1; i++) {
-                                    // comma 변수를 일단 false로 초기화 하고,
-                                    var comma = false;
-                                    // 불만족 필요조건이 있으면,
-                                    if (signup_id_required_arr[i] != "ok") {
-                                        // 필요조건 결과 문자열에 추가하고,
-                                        result += signup_id_required_arr[i];
-                                        // 그 이후 불만족 필요조건이 있는지 모두 검사해서
-                                        for (var j = i + 1; j < signup_id_required_arr.length; j++) {
-                                            // 불만족 필요조건이 있으면,
-                                            if (signup_id_required_arr[j] != "ok") {
-                                                // 콤마(,)가 필요하므로 콤마 변수값을 true로 변경한다.
-                                                comma = true;
-                                            }
-                                        }
-                                        // comma 변수값이 true이면, 필요조건 결과 문자열에 ", " 추가
-                                        if (comma == true) {
-                                            result += ", ";
-                                        }
-                                    }
-                                }
-                                // 아이디 필요조건을 모두 만족시키지 못했을 경우, 빨간 글씨로 만족되지 못한 필요조건을 출력한다.
+                    $.jsonRPC.request(id_overlap_check_jsonrpc_method, {
+                        id: 001,
+                        params: [overlap_check_id],
+                        success: function(data) {
+                            console.log('jsonRPC success 응답 받음.');
+                            if (data.result[0] == 'o') {
+                                console.log('아이디 중복 체크 : 이미 아이디가 존재함. 생성 불가능한 아이디.');
                                 $('#signup_user_id').attr('class', 'form-control is-invalid');
                                 $("#signup_id_required").attr('class', 'invalid-feedback');
-                                $("#signup_id_required").text(result);
+                                $("#signup_id_required").text("동일 아이디 존재");
+                                overlap_check = true;
+
+                            } else if (data.result[0] == 'x') {
+                                // 아이디 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
+                                console.log('아이디 중복 체크 : 중복되는 아이디가 존재하지 않음. 생성 가능한 아이디.');
+                                $('#signup_user_id').attr('class', 'form-control is-valid');
+                                $("#signup_id_required").attr('class', 'valid-feedback');
+                                $("#signup_id_required").text("OK");
+
+                                overlap_check = false;
                             }
 
-                        });
+                        },
+                        error: function(data) {
+                            console.log('jsonRPC error 응답 받음.');
+                            console.log(data.error.code + ', ' + data.error.message);
+                            window.location.href = '../views/error';
+                        }
+                    });
 
-                        // 비밀번호 유효성 검사 (키 누를 때 마다 변경)
+
+                } else {
+                    // 아이디 알파벳 존재 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 알파벳 해당 값 변경
+                    if (id_alphabet_pattern.test(signup_user_id.val()) == false) {
+                        // 불만족 시 "알파벳"
+                        signup_id_required_arr[0] = "알파벳";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_id_required_arr[0] = "ok";
+                    }
+                    // 아이디 숫자 존재 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 숫자 해당 값 변경
+                    if (id_digit_pattern.test(signup_user_id.val()) == false) {
+                        // 불만족 시 "숫자"
+                        signup_id_required_arr[1] = "숫자";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_id_required_arr[1] = "ok";
+                    }
+                    // 아이디 길이 검사 정규표현식 만족 여부에 따라, 아이디 검사 배열의 길이 해당 값 변경
+                    if (id_length_pattern.test(signup_user_id.val()) == false) {
+                        // 불만족 시 "5~15자"
+                        signup_id_required_arr[2] = "5~15자";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_id_required_arr[2] = "ok";
+                    }
+
+                    // 결과 출력을 위한 문자열을 변수에 할당
+                    var result = "";
+
+                    // 아이디를 입력할 때 마다 아이디 필요조건 배열에서 충족되지 못한 조건 출력
+
+                    // 모든 아이디 필요조건 배열 원소들에 대해
+                    for (var i = 0; i < signup_id_required_arr.length - 1; i++) {
+                        // comma 변수를 일단 false로 초기화 하고,
+                        var comma = false;
+                        // 불만족 필요조건이 있으면,
+                        if (signup_id_required_arr[i] != "ok") {
+                            // 필요조건 결과 문자열에 추가하고,
+                            result += signup_id_required_arr[i];
+                            // 그 이후 불만족 필요조건이 있는지 모두 검사해서
+                            for (var j = i + 1; j < signup_id_required_arr.length; j++) {
+                                // 불만족 필요조건이 있으면,
+                                if (signup_id_required_arr[j] != "ok") {
+                                    // 콤마(,)가 필요하므로 콤마 변수값을 true로 변경한다.
+                                    comma = true;
+                                }
+                            }
+                            // comma 변수값이 true이면, 필요조건 결과 문자열에 ", " 추가
+                            if (comma == true) {
+                                result += ", ";
+                            }
+                        }
+                    }
+                    // 아이디 필요조건을 모두 만족시키지 못했을 경우, 빨간 글씨로 만족되지 못한 필요조건을 출력한다.
+                    $('#signup_user_id').attr('class', 'form-control is-invalid');
+                    $("#signup_id_required").attr('class', 'invalid-feedback');
+                    $("#signup_id_required").text(result);
+                }
+
+            });
+
+            // 비밀번호 유효성 검사 (키 누를 때 마다 변경)
             signup_user_password.keyup(function() {
 
-                            if (password_pattern.test(signup_user_password.val())) {
-                                // 비밀번호 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
-                                $('#signup_user_password').attr('class', 'form-control is-valid');
-                                $("#signup_password_required").attr('class', 'valid-feedback');
-                                $("#signup_password_required").text("OK");
-                            } else {
-                                // 비밀번호 알파벳 대문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 알파벳 대문자 해당 값 변경
-                                if (password_upper_case_alphabet_pattern.test(signup_user_password.val()) == false) {
-                                    // 불만족 시 "대문자 알파벳"
-                                    signup_password_required_arr[0] = "대문자 알파벳";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_password_required_arr[0] = "ok";
-                                }
-                                // 비밀번호 알파벳 소문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 알파벳 소문자 해당 값 변경
-                                if (password_lower_case_alphabet_pattern.test(signup_user_password.val()) == false) {
-                                    // 불만족 시 "소문자 알파벳"
-                                    signup_password_required_arr[1] = "소문자 알파벳";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_password_required_arr[1] = "ok";
-                                }
-                                // 비밀번호 숫자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 숫자 해당 값 변경
-                                if (password_digit_pattern.test(signup_user_password.val()) == false) {
-                                    // 불만족 시 "숫자"
-                                    signup_password_required_arr[2] = "숫자";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_password_required_arr[2] = "ok";
-                                }
-                                // 비밀번호 특수문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 특수문자 해당 값 변경
-                                if (password_special_letters_pattern.test(signup_user_password.val()) == false) {
-                                    // 불만족 시 "특수문자"
-                                    signup_password_required_arr[3] = "특수문자";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_password_required_arr[3] = "ok";
-                                }
-                                // 비밀번호 길이 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 길이 해당 값 변경
-                                if (password_length_pattern.test(signup_user_password.val()) == false) {
-                                    // 불만족 시 "10~16자"
-                                    signup_password_required_arr[4] = "10~16자";
-                                } else {
-                                    // 만족 시 "ok"
-                                    signup_password_required_arr[4] = "ok";
-                                }
+                if (password_pattern.test(signup_user_password.val())) {
+                    // 비밀번호 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
+                    $('#signup_user_password').attr('class', 'form-control is-valid');
+                    $("#signup_password_required").attr('class', 'valid-feedback');
+                    $("#signup_password_required").text("OK");
+                } else {
+                    // 비밀번호 알파벳 대문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 알파벳 대문자 해당 값 변경
+                    if (password_upper_case_alphabet_pattern.test(signup_user_password.val()) == false) {
+                        // 불만족 시 "대문자 알파벳"
+                        signup_password_required_arr[0] = "대문자 알파벳";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_password_required_arr[0] = "ok";
+                    }
+                    // 비밀번호 알파벳 소문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 알파벳 소문자 해당 값 변경
+                    if (password_lower_case_alphabet_pattern.test(signup_user_password.val()) == false) {
+                        // 불만족 시 "소문자 알파벳"
+                        signup_password_required_arr[1] = "소문자 알파벳";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_password_required_arr[1] = "ok";
+                    }
+                    // 비밀번호 숫자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 숫자 해당 값 변경
+                    if (password_digit_pattern.test(signup_user_password.val()) == false) {
+                        // 불만족 시 "숫자"
+                        signup_password_required_arr[2] = "숫자";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_password_required_arr[2] = "ok";
+                    }
+                    // 비밀번호 특수문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 특수문자 해당 값 변경
+                    if (password_special_letters_pattern.test(signup_user_password.val()) == false) {
+                        // 불만족 시 "특수문자"
+                        signup_password_required_arr[3] = "특수문자";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_password_required_arr[3] = "ok";
+                    }
+                    // 비밀번호 길이 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 길이 해당 값 변경
+                    if (password_length_pattern.test(signup_user_password.val()) == false) {
+                        // 불만족 시 "10~16자"
+                        signup_password_required_arr[4] = "10~16자";
+                    } else {
+                        // 만족 시 "ok"
+                        signup_password_required_arr[4] = "ok";
+                    }
 
-                                // 결과 출력을 위한 문자열을 변수에 할당
-                                var result = "";
+                    // 결과 출력을 위한 문자열을 변수에 할당
+                    var result = "";
 
-                                // 비밀번호를 입력할 때 마다 비밀번호 필요조건 배열에서 충족되지 못한 조건 출력
+                    // 비밀번호를 입력할 때 마다 비밀번호 필요조건 배열에서 충족되지 못한 조건 출력
 
-                                // 모든 비밀번호 필요조건 배열 원소들에 대해
-                                for (var i = 0; i < signup_password_required_arr.length - 1; i++) {
-                                    // comma 변수를 일단 false로 초기화 하고,
-                                    var comma = false;
-                                    // 불만족 필요조건이 있으면,
-                                    if (signup_password_required_arr[i] != "ok") {
-                                        // 필요조건 결과 문자열에 추가하고,
-                                        result += signup_password_required_arr[i];
-                                        // 그 이후 불만족 필요조건이 있는지 모두 검사해서
-                                        for (var j = i + 1; j < signup_password_required_arr.length; j++) {
-                                            // 불만족 필요조건이 있으면,
-                                            if (signup_password_required_arr[j] != "ok") {
-                                                // 콤마(,)가 필요하므로 콤마 변수값을 true로 변경한다.
-                                                comma = true;
-                                            }
-                                        }
-                                        // comma 변수값이 true이면, 필요조건 결과 문자열에 ", " 추가
-                                        if (comma == true) {
-                                            result += ", ";
-                                        }
-                                    }
+                    // 모든 비밀번호 필요조건 배열 원소들에 대해
+                    for (var i = 0; i < signup_password_required_arr.length - 1; i++) {
+                        // comma 변수를 일단 false로 초기화 하고,
+                        var comma = false;
+                        // 불만족 필요조건이 있으면,
+                        if (signup_password_required_arr[i] != "ok") {
+                            // 필요조건 결과 문자열에 추가하고,
+                            result += signup_password_required_arr[i];
+                            // 그 이후 불만족 필요조건이 있는지 모두 검사해서
+                            for (var j = i + 1; j < signup_password_required_arr.length; j++) {
+                                // 불만족 필요조건이 있으면,
+                                if (signup_password_required_arr[j] != "ok") {
+                                    // 콤마(,)가 필요하므로 콤마 변수값을 true로 변경한다.
+                                    comma = true;
                                 }
-                                // 아이디 필요조건을 모두 만족시키지 못했을 경우, 빨간 글씨로 만족되지 못한 필요조건을 출력한다.
-                                $('#signup_user_password').attr('class', 'form-control is-invalid');
-                                $("#signup_password_required").attr('class', 'invalid-feedback');
-                                $("#signup_password_required").text(result);
-
                             }
-                        });
-
-                        // 비밀번호 확인 유효성 검사 (키 누를 때 마다 변경)
-                        signup_user_password_confirm.keyup(function() {
-                            // 만약 비밀번호와 비밀번호 확인 폼의 값이 서로 같으면
-                            if (signup_user_password.val() == signup_user_password_confirm.val()) {
-                                // 초록색 "OK"를 출력
-                                $('#signup_user_password_confirm').attr('class', 'form-control is-valid');
-                                $("#signup_password_confirm_required").attr('class', 'valid-feedback');
-                                $("#signup_password_confirm_required").text("CORRECT");
-                            } else {
-                                // 서로 다르면, 빨간색 "incorrect"를 출력
-                                $('#signup_user_password_confirm').attr('class', 'form-control is-invalid');
-                                $("#signup_password_confirm_required").attr('class', 'invalid-feedback');
-                                $("#signup_password_confirm_required").text("INCORRECT");
+                            // comma 변수값이 true이면, 필요조건 결과 문자열에 ", " 추가
+                            if (comma == true) {
+                                result += ", ";
                             }
-                        });
+                        }
+                    }
+                    // 아이디 필요조건을 모두 만족시키지 못했을 경우, 빨간 글씨로 만족되지 못한 필요조건을 출력한다.
+                    $('#signup_user_password').attr('class', 'form-control is-invalid');
+                    $("#signup_password_required").attr('class', 'invalid-feedback');
+                    $("#signup_password_required").text(result);
 
-                        // 회원가입 버튼을 눌렀을 때(폼 양식 제출 시에),
-                        signup_form.submit(function() {
-                            // 입력 아이디가 아이디 필요조건에 완전히 충족되지 않으면,
-                            if (id_pattern.test(signup_user_id.val()) != true) {
-                                // 경고창 출력 후,
-                                alert("조건에 맞는 ID를 입력해 주세요.");
-                                // 아이디 입력 input 태그에 포커스를 주고,
-                                signup_user_id.focus();
-                                // submit(제출)을 취소한다.
-                                return false;
-                                // 입력 비밀번호가 비밀번호 필요조건에 완전히 충족되지 않으면,
-                            } else if (password_pattern.test(signup_user_password.val()) != true) {
-                                // 경고창 출력 후,
-                                alert("조건에 맞는 PASSWORD를 입력해 주세요.");
-                                // 비밀번호 입력 input 태그에 포커스를 주고,
-                                signup_user_password.focus();
-                                // submit(제출)을 취소한다.
-                                return false;
-                                // 비밀번호 값과 비밀번호 확인 값이 서로 같지 않으면,
-                            } else if (signup_user_password.val() != signup_user_password_confirm.val()) {
-                                // 경고창 출력 후,
-                                alert("PASSWORD와 PASSWORD_CONFIRM이 일치하지 않습니다.");
-                                // 비밀번호 확인 입력 input 태그에 포커스를 주고,
-                                signup_user_password_confirm.focus();
-                                // submit(제출)을 취소한다.
-                                return false;
-                            } else if (overlap_check==true) {
-                                // 경고창 출력 후,
-                                alert("동일한 아이디가 이미 가입되어 있습니다.");
-                                // 아이디 입력 input 태그에 포커스를 주고,
-                                signup_user_id.focus();
-                                // submit(제출)을 취소한다.
-                                return false;
-                            }
-                        });
+                }
+            });
+
+            // 비밀번호 확인 유효성 검사 (키 누를 때 마다 변경)
+            signup_user_password_confirm.keyup(function() {
+                // 만약 비밀번호와 비밀번호 확인 폼의 값이 서로 같으면
+                if (signup_user_password.val() == signup_user_password_confirm.val()) {
+                    // 초록색 "OK"를 출력
+                    $('#signup_user_password_confirm').attr('class', 'form-control is-valid');
+                    $("#signup_password_confirm_required").attr('class', 'valid-feedback');
+                    $("#signup_password_confirm_required").text("CORRECT");
+                } else {
+                    // 서로 다르면, 빨간색 "incorrect"를 출력
+                    $('#signup_user_password_confirm').attr('class', 'form-control is-invalid');
+                    $("#signup_password_confirm_required").attr('class', 'invalid-feedback');
+                    $("#signup_password_confirm_required").text("INCORRECT");
+                }
+            });
+
+            var code;
+            var code_confirm_bool=false;
+            var email_send_bool=false;
+
+            $('#email_code_send_button').on('click', function() {
+
+                if($('#signup_user_email').val().length==0){
+                    alert('Please enter your email.');
+                    return;
+                }
+
+                var signup_user_email = $('#signup_user_email').val();
+
+                $.jsonRPC.request('send_email', {
+                    id: 002,
+                    params: [signup_user_email],
+                    success: function(data) {
+                        console.log(' jsonRPC success response is received.');
+                        if(data.result[0] == true){
+                            code = data.result[1];
+                            console.log('Received code : ', code);
+                            email_send_bool = true;
+                            alert('We just sent the code to your email. Please enter the code in the form below.');
+                        }
+                    },
+                    error: function(data) {
+                        console.log('jsonRPC error 응답 받음.');
+                        console.log(data.error.code + ', ' + data.error.message);
+                        window.location.href = '../views/error';
+                    }
+                });
+            });
+
+            $('#email_code_confirm_button').on('click', function(){
+                if(email_send_bool){
+                    if(code==$('#signup_user_email_confirm_code').val()){
+                        alert('Your email code verification was successful!');
+                        console.log('이메일 코드 인증 성공.');
+                        $('#signup_user_email_confirm_code').attr('class', 'form-control is-valid');
+                        $("#signup_user_email_confirm_code_feedback").css('visibility', 'visible');
+                        $("#signup_user_email_confirm_code_feedback").attr('class', 'valid-feedback');
+                        $("#signup_user_email_confirm_code_feedback").text("OK");
+                        code_confirm_bool = true;
+
+                    }else{
+                        alert('Your email code verification was failed!');
+                        console.log('이메일 코드 인증 실패.');
+                        $('#signup_user_email_confirm_code').attr('class', 'form-control is-invalid');
+                        $("#signup_user_email_confirm_code_feedback").attr('visibility', 'hidden');
+                        $("#signup_user_email_confirm_code_feedback").attr('class', 'invalid-feedback');
+                        $("#signup_user_email_confirm_code_feedback").text("INCORRECT");
+                        code_confirm_bool = false;
+                    }
+                }else{
+                    alert('Please send the code to your email first.');
+                }
+            });
+
+            // 회원가입 버튼을 눌렀을 때(폼 양식 제출 시에),
+            signup_form.submit(function() {
+                // 입력 아이디가 아이디 필요조건에 완전히 충족되지 않으면,
+                if (id_pattern.test(signup_user_id.val()) != true) {
+                    // 경고창 출력 후,
+                    alert("조건에 맞는 ID를 입력해 주세요.");
+                    // 아이디 입력 input 태그에 포커스를 주고,
+                    signup_user_id.focus();
+                    // submit(제출)을 취소한다.
+                    return false;
+                    // 입력 비밀번호가 비밀번호 필요조건에 완전히 충족되지 않으면,
+                } else if (password_pattern.test(signup_user_password.val()) != true) {
+                    // 경고창 출력 후,
+                    alert("조건에 맞는 PASSWORD를 입력해 주세요.");
+                    // 비밀번호 입력 input 태그에 포커스를 주고,
+                    signup_user_password.focus();
+                    // submit(제출)을 취소한다.
+                    return false;
+                    // 비밀번호 값과 비밀번호 확인 값이 서로 같지 않으면,
+                } else if (signup_user_password.val() != signup_user_password_confirm.val()) {
+                    // 경고창 출력 후,
+                    alert("PASSWORD와 PASSWORD_CONFIRM이 일치하지 않습니다.");
+                    // 비밀번호 확인 입력 input 태그에 포커스를 주고,
+                    signup_user_password_confirm.focus();
+                    // submit(제출)을 취소한다.
+                    return false;
+                } else if (overlap_check == true) {
+                    // 경고창 출력 후,
+                    alert("동일한 아이디가 이미 가입되어 있습니다.");
+                    // 아이디 입력 input 태그에 포커스를 주고,
+                    signup_user_id.focus();
+                    // submit(제출)을 취소한다.
+                    return false;
+                }else if ( code_confirm_bool == false) {
+                    // 경고창 출력 후,
+                    alert("Please check your email.");
+                    // 아이디 입력 input 태그에 포커스를 주고,
+                    $('#email_code_send_button').focus();
+                    // submit(제출)을 취소한다.
+                    return false;
+                }
+            });
 
         });
     </script>
