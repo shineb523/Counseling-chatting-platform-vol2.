@@ -10,15 +10,15 @@
 var LocalStrategy = require('passport-local').Strategy;
 
 module.exports = new LocalStrategy({
-    usernameField: 'signin_signin_user_id',
-    passwordField: 'signin_signin_user_password',
+    usernameField: 'signin_user_email',
+    passwordField: 'signin_user_password',
     passReqToCallback: true // 이 옵션을 설정하면 아래 콜백 함수의 첫번째 파라미터로 req 객체 전달됨
-}, function(req, signin_user_id, signin_user_password, done) {
+}, function(req, signin_user_email, signin_user_password, done) {
     console.log('Local-login of passport is called.');
 
     var database = req.app.get('database');
     database.user_account_model.findOne({
-        'id': signin_user_id
+        'email': signin_user_email
     }, function(err, user) {
         if (err) {
             return done(err);
@@ -26,7 +26,7 @@ module.exports = new LocalStrategy({
 
         // 등록된 사용자가 없는 경우
         if (!user) {
-            console.log('Incorrect ID or PASSWORD.');
+            console.log('Incorrect Email or PASSWORD.');
             return done(null, false); // 검증 콜백에서 두 번째 파라미터의 값을 false로 하여 인증 실패한 것으로 처리
         }
 

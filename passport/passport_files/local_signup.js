@@ -10,18 +10,18 @@
 var LocalStrategy = require('passport-local').Strategy;
 
 module.exports = new LocalStrategy({
-    usernameField: 'userid',
-    passwordField: 'userpassword',
+    usernameField: 'signup_user_email',
+    passwordField: 'signup_user_password',
     passReqToCallback: true // 이 옵션을 설정하면 아래 콜백 함수의 첫번째 파라미터로 req 객체 전달됨
-}, function(req, userid, userpassword, done) {
+}, function(req, signup_user_email, signup_user_password, done) {
 
-    console.log('passport의 local-signup 호출됨 : ' + userid + ', ' + userpassword);
+    console.log('passport의 local-signup 호출됨 : ' + signup_user_email + ', ' + signup_user_password);
 
     process.nextTick(function() {
 
         var database = req.app.get('database');
         database.user_account_model.findOne({
-            'id': userid
+            'email': signup_user_email
         }, function(err, user) {
             // 에러 발생 시
             if (err) {
@@ -35,8 +35,8 @@ module.exports = new LocalStrategy({
             } else {
                 // 모델 인스턴스 객체 만들어 저장
                 var user = new database.user_account_model({
-                    'id': userid,
-                    'password': userpassword
+                    'email': signup_user_email,
+                    'password': signup_user_password
                 });
                 user.save(function(err) {
                     if (err) {

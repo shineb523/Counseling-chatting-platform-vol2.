@@ -44,7 +44,6 @@ var send_email = function(params, callback) {
                 code: 430,
                 message: 'Failed to send email.'
             }, null);
-            throw err;
             return;
         } else {
             console.log('Email sent: ' + info.response);

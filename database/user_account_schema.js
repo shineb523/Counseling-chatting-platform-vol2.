@@ -13,7 +13,7 @@ Schema.createSchema = function(mongoose) {
 
     // 스키마 정의
     var user_account_schema = mongoose.Schema({
-        id: {
+        email: {
             type: String,
             required: true
         },
@@ -22,10 +22,6 @@ Schema.createSchema = function(mongoose) {
             required: true
         },
         salt: {
-            type: String,
-            required: true
-        },
-        email: {
             type: String,
             required: true
         },
@@ -107,9 +103,9 @@ Schema.createSchema = function(mongoose) {
     })
 
     // 입력된 칼럼의 값이 있는지 확인
-    user_account_schema.path('id').validate(function(id) {
-        return id.length;
-    }, 'id 칼럼의 값이 없습니다.');
+    user_account_schema.path('email').validate(function(email) {
+        return email.length;
+    }, 'email 칼럼의 값이 없습니다.');
 
     user_account_schema.path('hashed_password').validate(function(hashed_password) {
         return hashed_password.length;
