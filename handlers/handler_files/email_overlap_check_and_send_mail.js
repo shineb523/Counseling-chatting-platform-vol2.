@@ -25,9 +25,13 @@ var email_overlap_check_and_send_mail= function(params, callback) {
     }, function(err, user) {
         if (err) {
             console.log(err);
-            console.log('findOne 함수 호출 중 오류 발생.');
-            throw err;
-            return;
+            console.log('Failed to call findOne function.');
+                console.log('Failed to send email.');
+                callback({
+                    code: 420,
+                    message: 'Failed to call findOne function.'
+                }, null);
+                return;
         }
 
         if (user) {
@@ -84,13 +88,12 @@ var email_overlap_check_and_send_mail= function(params, callback) {
                     mailing_bool = true;
                     output[1]=code;
                     output[2]=mailing_bool;
+                    console.log('output : ', output);
                     callback(null, output);
                 }
             });
 
         }
-
-        callback(null, output);
 
     });
 
