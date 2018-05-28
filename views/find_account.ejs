@@ -407,7 +407,7 @@
 
         /* No media query since the extra-large breakpoint has no upper bound on its width */
     </style>
-    <title>Brand name - sign-in</title>
+    <title>Brand name - find_account</title>
 </head>
 
 <body>
@@ -441,12 +441,14 @@
 
         var email_pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-        if(email_pattern.test($('#change_password_email_send_button').val())!=true){
-            // 경고창 출력 후,
-            alert("Please enter a valid email.");
-            // 아이디 입력 input 태그에 포커스를 주고,
-            $('#find_password_email').focus();
-        }
+        $('#change_password_email_send_button').on('click touchstart', function(){
+            if(email_pattern.test($('#change_password_email_send_button').val())!=true){
+                // 경고창 출력 후,
+                alert("Please enter a valid email.");
+                // 아이디 입력 input 태그에 포커스를 주고,
+                $('#find_password_email').focus();
+            }
+        });
     });
     </script>
 </body>

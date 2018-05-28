@@ -1,9 +1,9 @@
 // 비밀번호 수정 시, 데이터베이스 수정.
 module.exports = function(req, res) {
 
-    var new_password = req.body.new_password;
+    var change_password_new = req.body.change_password_new;
 
-    console.log('/modify_password 패스 요청됨.');
+    console.log('/change_password path is called.');
 
     console.log('req.user의 정보');
     console.dir(req.user);
@@ -11,14 +11,14 @@ module.exports = function(req, res) {
     // 인증 안된 경우
     if (!req.user) {
         console.log('사용자 인증 안된 상태임.');
-        res.redirect('/index_signin');
+        res.redirect('/index_not_signed_in_page');
         return;
 
     } else {
 
         if (!req.session.check_changepwd) {
             console.log('현재 비밀번호 확인되지 않음.');
-            res.redirect('/current_password_confirm_changepwd');
+            res.redirect('/current_password_confirm_changepwd_page');
             return;
         }
 
@@ -32,11 +32,11 @@ module.exports = function(req, res) {
 
 
             var tmp = new database.user_account_model({
-                'password': new_password
+                'password': change_password_new
             });
 
             database.user_account_model.update({
-                id: req.user.id
+                email: req.user.email
             }, {
                 $set: {
                     hashed_password: tmp.hashed_password,
@@ -46,7 +46,7 @@ module.exports = function(req, res) {
             }, function(err, result) {
                 if (err) {
                     console.log('update 함수 사용 중 에러');
-                    res.redirect('/error');
+                    res.redirect('/error_page');
                     return;
                 }
                 console.log(result);
@@ -54,12 +54,11 @@ module.exports = function(req, res) {
             });
         } else {
             console.log('데이터베이스 연결 실패.');
-            res.redirect('/error');
+            res.redirect('/database_connect_error_page');
             return;
         }
 
-        req.logout();
-        res.redirect('/modify_password_success');
+        res.redirect('/change_password_success_page');
         return;
     }
 }

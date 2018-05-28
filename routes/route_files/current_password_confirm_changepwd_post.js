@@ -1,6 +1,6 @@
 module.exports = function(req, res) {
 
-    var current_password = req.body.current_password;
+    var current_password = req.body.current_password_confirm_changepwd_password;
 
     console.log('/current_password_confirm_changepwd 패스 요청됨.');
 
@@ -10,7 +10,7 @@ module.exports = function(req, res) {
     // 인증 안된 경우
     if (!req.user) {
         console.log('사용자 인증 안된 상태임.');
-        res.redirect('/index_signin');
+        res.redirect('/signin_page');
         return;
     } else {
         console.log('사용자 인증된 상태임.');
@@ -20,19 +20,19 @@ module.exports = function(req, res) {
         if (database.db) {
             console.log('데이터베이스 연결 성공.');
             database.user_account_model.findOne({
-                'id': req.user.id
+                'email': req.user.email
             }, function(err, user) {
                 if (err) {
                     console.log(err);
                     console.log('findOne 함수 호출 중 오류 발생.');
-                    res.redirect('/error');
+                    res.redirect('/error_page');
                     return;
                 }
 
                 // 등록된 사용자가 없는 경우
                 if (!user) {
                     console.log('세션 아이디가 데이터베이스에 존재하지 않거나, 세션이 존재하지 않음.');
-                    res.redirect('/error');
+                    res.redirect('/error_page');
                     return;
                 }
 
@@ -40,7 +40,7 @@ module.exports = function(req, res) {
                 var authenticated = user.authenticate(current_password, user._doc.salt, user._doc.hashed_password);
                 if (!authenticated) {
                     console.log('현재 비밀번호 일치하지 않음.');
-                    res.redirect('/current_password_confirm_failed_changepwd');
+                    res.redirect('/current_password_confirm_fail_changepwd_page');
                     return;
                 }
 
@@ -49,13 +49,13 @@ module.exports = function(req, res) {
                     console.log('현재 비밀번호가 일치함.');
 					req.session.check_changepwd=true;
 					console.log('req.session : ', req.session);
-                    res.redirect('/modify_password');
+                    res.redirect('/change_password_page');
                     return;
                 }
             });
         } else {
             console.log('데이터베이스 연결 실패.');
-            res.redirect('/database_connect_error');
+            res.redirect('/database_connect_error_page');
             return;
         }
     }

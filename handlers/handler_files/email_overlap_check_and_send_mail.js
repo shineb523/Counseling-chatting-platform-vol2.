@@ -57,7 +57,7 @@ var email_overlap_check_and_send_mail= function(params, callback) {
 
             var mailing_bool = false;
             var code = makeCode();
-            var email_text = 'Code : '+code;
+            var email_text = 'Please enter this code : '+code;
 
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -70,7 +70,7 @@ var email_overlap_check_and_send_mail= function(params, callback) {
             var mailOptions = {
                 from: 'rschbh12@gmail.com',
                 to: signup_user_email,
-                subject: 'Sending_mail_test_title',
+                subject: 'CP email confirm CODE.',
                 text: email_text
             };
 

@@ -80,6 +80,36 @@
              type: 'get'
          },
          {
+             method_file_path: '../routes/route_files/current_password_confirm_changepwd_page_get',
+             path: '/current_password_confirm_changepwd_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/current_password_confirm_fail_changepwd_page_get',
+             path: '/current_password_confirm_fail_changepwd_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/current_password_confirm_changepwd_post',
+             path: '/current_password_confirm_changepwd',
+             type: 'post'
+         },
+         {
+             method_file_path: '../routes/route_files/change_password_page_get',
+             path: '/change_password_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/change_password_post',
+             path: '/change_password',
+             type: 'post'
+         },
+         {
+             method_file_path: '../routes/route_files/change_password_success_page_get',
+             path: '/change_password_success_page',
+             type: 'get'
+         },
+         {
              method_file_path: '../routes/route_files/signup_success_page_get',
              path: '/signup_success_page',
              type: 'get'

@@ -780,7 +780,7 @@
             var code_confirm_bool = false;
             var email_send_bool = false;
 
-            $('#email_code_send_button').on('click', function() {
+            $('#email_code_send_button').on('click touchstart', function() {
 
 
                 if (email_pattern.test($('#signup_user_email').val()) != true) {
@@ -838,7 +838,7 @@
                 }
             });
 
-            $('#email_code_confirm_button').on('click', function() {
+            $('#email_code_confirm_button').on('click touchstart', function() {
                 if (email_send_bool) {
                     if (code == $('#signup_user_email_confirm_code').val()) {
                         alert('Your email code verification was successful!');
