@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -7,52 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style>
         /* Extra small devices (portrait phones, 375px and up) */
 
         @media (max-width: 319.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
                 margin-left: auto;
                 margin-right: auto;
+                width: 80%;
             }
-            #find_account_title {
+            #find_account_box{
+                margin-top: 49px;
+            }
+            #title{
                 text-align: center;
-                font-size: 51px;
-                margin-top: 38px;
+                font-size: 61px;
                 margin-bottom: 20px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_new_password_confirm_div {
-                    margin-bottom: 14px;
-            }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 40px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
             .btn-outline-secondary:not(:disabled):not(.disabled).active,
             .btn-outline-secondary:not(:disabled):not(.disabled):active,
@@ -87,46 +72,32 @@
         /* Extra small devices (portrait phones, 320px and up) */
 
         @media (min-width: 320px) and (max-width: 374.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
                 margin-left: auto;
                 margin-right: auto;
+                width: 80%;
             }
-            #find_account_title {
+            #find_account_box{
+                margin-top: 49px;
+            }
+            #title{
                 text-align: center;
-                font-size: 51px;
-                margin-top: 38px;
+                font-size: 61px;
                 margin-bottom: 20px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_new_password_confirm_div {
-                    margin-bottom: 14px;
-            }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 40px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
             .btn-outline-secondary:not(:disabled):not(.disabled).active,
             .btn-outline-secondary:not(:disabled):not(.disabled):active,
@@ -161,46 +132,32 @@
         /* Extra small devices (portrait phones, 375px and up) */
 
         @media (min-width: 375px) and (max-width: 424.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
                 margin-left: auto;
                 margin-right: auto;
+                width: 80%;
             }
-            #find_account_title {
+            #find_account_box{
+                margin-top: 49px;
+            }
+            #title{
                 text-align: center;
-                font-size: 56px;
-                margin-top: 37px;
-                margin-bottom: 19px;
+                font-size: 61px;
+                margin-bottom: 20px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 16px;
-            }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 39px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
             .btn-outline-secondary:not(:disabled):not(.disabled).active,
             .btn-outline-secondary:not(:disabled):not(.disabled):active,
@@ -235,46 +192,32 @@
         /* Small devices (landscape phones, 425px and up) */
 
         @media (min-width: 425px) and (max-width: 767.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
                 margin-left: auto;
                 margin-right: auto;
+                width: 80%;
             }
-            #find_account_title {
+            #find_account_box{
+                margin-top: 49px;
+            }
+            #title{
                 text-align: center;
-                font-size: 63px;
-                margin-top: 35px;
+                font-size: 61px;
                 margin-bottom: 20px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 16px;
-            }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 41px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
             .btn-outline-secondary:not(:disabled):not(.disabled).active,
             .btn-outline-secondary:not(:disabled):not(.disabled):active,
@@ -309,46 +252,32 @@
         /* Medium devices (tablets, 768px and up) */
 
         @media (min-width: 768px) and (max-width: 991.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 320px;
                 margin-left: auto;
                 margin-right: auto;
+                width: 350px;
             }
-            #find_account_title {
-                text-align: center;
-                font-size: 72px;
+            #find_account_box{
                 margin-top: 49px;
-                margin-bottom: 29px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #title{
+                text-align: center;
+                font-size: 61px;
+                margin-bottom: 20px;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 18px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 42px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
             .btn-outline-secondary:not(:disabled):not(.disabled).active,
             .btn-outline-secondary:not(:disabled):not(.disabled):active,
@@ -383,187 +312,157 @@
         /* Large devices (desktops, 992px and up) */
 
         @media (min-width: 992px) and (max-width: 1199.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 320px;
                 margin-left: auto;
                 margin-right: auto;
+                width: 350px;
             }
-            #find_account_title {
-                text-align: center;
-                font-size: 72px;
+            #find_account_box{
                 margin-top: 49px;
-                margin-bottom: 29px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #title{
+                text-align: center;
+                font-size: 61px;
+                margin-bottom: 20px;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 18px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 39px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
         }
 
         /* Extra large devices (large desktops, 1200px and up) */
 
         @media (min-width: 1200px) and (max-width: 2559.98px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 320px;
                 margin-left: auto;
                 margin-right: auto;
+                width: 350px;
             }
-            #find_account_title {
-                text-align: center;
-                font-size: 72px;
+            #find_account_box{
                 margin-top: 49px;
-                margin-bottom: 29px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #title{
+                text-align: center;
+                font-size: 61px;
+                margin-bottom: 20px;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 18px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 43px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
         }
 
         /* Extra large devices (super desktops, 2560px and up) */
 
         @media (min-width: 2560px) {
-            #find_account_form {
+
+            #outermost_container{
                 display: flex;
                 flex-direction: column;
-                width: 320px;
                 margin-left: auto;
                 margin-right: auto;
+                width: 350px;
             }
-            #find_account_title {
-                text-align: center;
-                font-size: 72px;
+            #find_account_box{
                 margin-top: 49px;
-                margin-bottom: 29px;
             }
-            #find_account_user_email_div,
-            #find_account_new_password_div {
-                margin-bottom: 5px;
+            #title{
+                text-align: center;
+                font-size: 61px;
+                margin-bottom: 20px;
             }
-            #find_account_new_password_div {
-                margin-top: 38px;
+            #find_account_form{
+                display: flex;
+                flex-direction: column;
             }
-            #find_account_new_password_confirm_div {
-                margin-bottom: 18px;
+            #changed_password_email_send_button{
+                margin-top: 23px;
+                margin-bottom: 35px;
             }
-            #find_account_user_email_box {
-                margin-bottom: 19px;
-            }
-            .mb-3 {
-                margin-bottom: 5px !important;
-            }
-            #find_account_user_email_confirm_code_box {
-                margin-bottom: -21px;
-            }
-            #find_account_submit_button {
-                margin-bottom: 42px;
-            }
-            a {
-                align-self: center;
-            }
-            #home_link {
-                margin-bottom: 100px;
+            #home_link{
+                text-align: center;
             }
         }
 
         /* No media query since the extra-large breakpoint has no upper bound on its width */
     </style>
+    <title>Brand name - find_account</title>
 </head>
 
 <body>
-    <p id="find_account_title">Find account</p>
-    <form id="find_account_form" action="/find_account" method="post">
-        <div id="find_account_user_email_box">
-            <label for="find_account_user_email">Email</label>
-            <div class="input-group mb-3">
-                <input id="find_account_user_email" name="find_account_user_email" class="form-control" type="email" placeholder="Enter email" aria-label="Enter email" aria-describedby="emailHelp">
-                <div class="input-group-append">
-                    <button id="email_code_send_button" class="btn btn-outline-secondary" type="button">Send code</button>
-                </div>
-            </div>
-        </div>
+    <div id="outermost_container">
+        <div id="find_account_box">
+            <div id="title">Find account</div>
+                <form id="find_account_form" method="post" action="/send_changed_password">
+                    <div id="find_account_user_email_box">
+                        <label for="find_account_user_email">Email</label>
+                        <div class="input-group mb-3">
+                            <input id="find_account_user_email" name="find_account_user_email" class="form-control" type="email" placeholder="Enter email" aria-label="Enter email" aria-describedby="emailHelp">
+                            <div class="input-group-append">
+                                <button id="email_code_send_button" class="btn btn-outline-secondary" type="button">Send code</button>
+                            </div>
+                        </div>
+                    </div>
 
-        <div id="find_account_user_email_confirm_code_box">
-            <label for="find_account_user_email_confirm_code">Email confirm code</label>
-            <div class="input-group mb-3">
-                <input id="find_account_user_email_confirm_code" name="find_account_user_email_confirm_code" class="form-control" type="text" placeholder="Enter code" aria-label="Enter code" aria-describedby="codeHelp">
-                <div class="input-group-append">
-                    <button id="email_code_confirm_button" class="btn btn-outline-secondary" type="button">Confirm code</button>
-                </div>
-            </div>
-        </div>
-        <div id="find_account_new_password_div">
-            <label for="find_account_new_password">NEW PASSWORD</label>
-            <input id="find_account_new_password" class="form-control is-invalid" type="password" name="find_account_new_password" placeholder="Enter password">
-            <p id="find_account_password_required" class="invalid-feedback">upper, lower, number, special, 10~16 long</p>
-        </div>
-        <div id="find_account_new_password_confirm_div">
-            <label for="find_account_new_password_confirm">NEW PASSWORD_CONFIRM</label>
-            <input id="find_account_new_password_confirm" class="form-control is-invalid" type="password" placeholder="Enter password again">
-            <p id="find_account_password_confirm_required" class="invalid-feedback">INCORRECT</p>
-        </div>
+                    <div id="find_account_user_email_confirm_code_box">
+                        <label for="find_account_user_email_confirm_code">Email confirm code</label>
+                        <div class="input-group mb-3">
+                            <input id="find_account_user_email_confirm_code" name="find_account_user_email_confirm_code" class="form-control" type="text" placeholder="Enter code" aria-label="Enter code" aria-describedby="codeHelp">
+                            <div class="input-group-append">
+                                <button id="email_code_confirm_button" class="btn btn-outline-secondary" type="button">Confirm code</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="find_account_user_password_div">
+                        <label for="find_account_user_password">PASSWORD</label>
+                        <input id="find_account_user_password" class="form-control is-invalid" type="password" name="find_account_user_password" placeholder="Enter password">
+                        <p id="find_account_password_required" class="invalid-feedback">upper, lower, number, special, 10~16 long</p>
+                    </div>
+                    <div id="find_account_user_password_confirm_div">
+                        <label for="find_account_user_password_confirm">PASSWORD_CONFIRM</label>
+                        <input id="find_account_user_password_confirm" class="form-control is-invalid" type="password" placeholder="Enter password again">
+                        <p id="find_account_password_confirm_required" class="invalid-feedback">INCORRECT</p>
+                    </div>
 
-        <button id="find_account_submit_button" type="submit" class="btn btn-outline-secondary">Change password</button>
+                    <button id="find_account_submit_button" type="submit" class="btn btn-outline-secondary">Change password</button>
 
-        <a id="home_link" href="/">Home</a>
-    </form>
+                    <br>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-    </script>
-    <script src="../public/jquery.jsonrpc.js">
-    </script>
+                    <a id="home_link" href="/">Home</a>
+                </form>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="../public/jquery.jsonrpc.js"></script>
     <script>
         (jQuery)(function($) {
             $.jsonRPC.setup({
@@ -594,20 +493,20 @@
             // 선택 반복 번거로움 해결 위해 자바 스크립트 변수에 할당
             var find_account_form = $("#find_account_form");
             var find_account_user_email = $("#find_account_user_email");
-            var find_account_new_password = $("#find_account_new_password");
-            var find_account_new_password_confirm = $("#find_account_new_password_confirm");
+            var find_account_user_password = $("#find_account_user_password");
+            var find_account_user_password_confirm = $("#find_account_user_password_confirm");
 
             // 비밀번호 유효성 검사 (키 누를 때 마다 변경)
-            find_account_new_password.keyup(function() {
+            find_account_user_password.keyup(function() {
 
-                if (password_pattern.test(find_account_new_password.val())) {
+                if (password_pattern.test(find_account_user_password.val())) {
                     // 비밀번호 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
-                    $('#find_account_new_password').attr('class', 'form-control is-valid');
+                    $('#find_account_user_password').attr('class', 'form-control is-valid');
                     $("#find_account_password_required").attr('class', 'valid-feedback');
                     $("#find_account_password_required").text("OK");
                 } else {
                     // 비밀번호 letter 대문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 letter 대문자 해당 값 변경
-                    if (password_upper_case_alphabet_pattern.test(find_account_new_password.val()) == false) {
+                    if (password_upper_case_alphabet_pattern.test(find_account_user_password.val()) == false) {
                         // 불만족 시 "upper"
                         find_account_password_required_arr[0] = "upper";
                     } else {
@@ -615,7 +514,7 @@
                         find_account_password_required_arr[0] = "ok";
                     }
                     // 비밀번호 letter 소문자 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 letter 소문자 해당 값 변경
-                    if (password_lower_case_alphabet_pattern.test(find_account_new_password.val()) == false) {
+                    if (password_lower_case_alphabet_pattern.test(find_account_user_password.val()) == false) {
                         // 불만족 시 "lower"
                         find_account_password_required_arr[1] = "lower";
                     } else {
@@ -623,7 +522,7 @@
                         find_account_password_required_arr[1] = "ok";
                     }
                     // 비밀번호 number 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 number 해당 값 변경
-                    if (password_digit_pattern.test(find_account_new_password.val()) == false) {
+                    if (password_digit_pattern.test(find_account_user_password.val()) == false) {
                         // 불만족 시 "number"
                         find_account_password_required_arr[2] = "number";
                     } else {
@@ -631,7 +530,7 @@
                         find_account_password_required_arr[2] = "ok";
                     }
                     // 비밀번호 special 존재 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 special 해당 값 변경
-                    if (password_special_letters_pattern.test(find_account_new_password.val()) == false) {
+                    if (password_special_letters_pattern.test(find_account_user_password.val()) == false) {
                         // 불만족 시 "special"
                         find_account_password_required_arr[3] = "special";
                     } else {
@@ -639,7 +538,7 @@
                         find_account_password_required_arr[3] = "ok";
                     }
                     // 비밀번호 길이 검사 정규표현식 만족 여부에 따라, 비밀번호 검사 배열의 길이 해당 값 변경
-                    if (password_length_pattern.test(find_account_new_password.val()) == false) {
+                    if (password_length_pattern.test(find_account_user_password.val()) == false) {
                         // 불만족 시 "10~16 long"
                         find_account_password_required_arr[4] = "10~16 long";
                     } else {
@@ -675,7 +574,7 @@
                         }
                     }
                     // 아이디 필요조건을 모두 만족시키지 못했을 경우, 빨간 글씨로 만족되지 못한 필요조건을 출력한다.
-                    $('#find_account_new_password').attr('class', 'form-control is-invalid');
+                    $('#find_account_user_password').attr('class', 'form-control is-invalid');
                     $("#find_account_password_required").attr('class', 'invalid-feedback');
                     $("#find_account_password_required").text(result);
 
@@ -683,16 +582,16 @@
             });
 
             // 비밀번호 확인 유효성 검사 (키 누를 때 마다 변경)
-            find_account_new_password_confirm.keyup(function() {
+            find_account_user_password_confirm.keyup(function() {
                 // 만약 비밀번호와 비밀번호 확인 폼의 값이 서로 같으면
-                if (find_account_new_password.val() == find_account_new_password_confirm.val()) {
+                if (find_account_user_password.val() == find_account_user_password_confirm.val()) {
                     // 초록색 "OK"를 출력
-                    $('#find_account_new_password_confirm').attr('class', 'form-control is-valid');
+                    $('#find_account_user_password_confirm').attr('class', 'form-control is-valid');
                     $("#find_account_password_confirm_required").attr('class', 'valid-feedback');
                     $("#find_account_password_confirm_required").text("CORRECT");
                 } else {
                     // 서로 다르면, 빨간색 "incorrect"를 출력
-                    $('#find_account_new_password_confirm').attr('class', 'form-control is-invalid');
+                    $('#find_account_user_password_confirm').attr('class', 'form-control is-invalid');
                     $("#find_account_password_confirm_required").attr('class', 'invalid-feedback');
                     $("#find_account_password_confirm_required").text("INCORRECT");
                 }
@@ -712,28 +611,28 @@
                     $('#find_account_user_email').focus();
                 } else {
 
-                    var find_account_email = $('#find_account_user_email').val();
-                    console.log('find_account_email : ', find_account_email);
-                    var find_account_jsonrpc_method = 'find_account_send_code';
+                    var overlap_check_email = $('#find_account_user_email').val();
+                    console.log('overlap_check_email : ', overlap_check_email);
+                    var email_overlap_check_jsonrpc_method = 'email_overlap_check_and_send_mail';
 
-                    $.jsonRPC.request(find_account_jsonrpc_method, {
-                        id: 002,
-                        params: [find_account_email],
+                    $.jsonRPC.request(email_overlap_check_jsonrpc_method, {
+                        id: 001,
+                        params: [overlap_check_email],
                         success: function(data) {
                             console.log(' jsonRPC success response is received.');
                             console.log('data.result : ', data.result);
-                            if (data.result[0] == 'x') {
-                                console.log('가입되지 않은 이메일.');
+                            if (data.result[0] == 'o') {
+                                console.log('아이디 중복 체크 : 이미 아이디가 존재함. 생성 불가능한 아이디.');
 
-                                alert('Unsubscribed email. Sign up for membership.');
+                                alert('This is an already signed email. Please enter another email.');
 
                                 $('#find_account_user_email').attr('class', 'form-control is-invalid');
                                 $("#find_account_id_required").attr('class', 'invalid-feedback');
-                                $("#find_account_id_required").text("Unsubscribed");
+                                $("#find_account_id_required").text("Already signed");
 
-                            } else if (data.result[0] == 'o') {
+                            } else if (data.result[0] == 'x') {
                                 // 아이디 필요조건을 모두 만족했을 때, 필요조건 메시지를 초록색 "OK"로 출력
-                                console.log('가입된 이메일.');
+                                console.log('아이디 중복 체크 : 중복되는 아이디가 존재하지 않음. 생성 가능한 아이디.');
 
                                 console.log('data.result[1] : ', data.result[1]);
 
@@ -790,19 +689,19 @@
                     return false;
                 }
                 // 입력 아이디가 아이디 필요조건에 완전히 충족되지 않으면,
-                if (password_pattern.test(find_account_new_password.val()) != true) {
+                if (password_pattern.test(find_account_user_password.val()) != true) {
                     // 경고창 출력 후,
                     alert("Please enter an PASSWORD that matches criteria.");
                     // 비밀번호 입력 input 태그에 포커스를 주고,
-                    find_account_new_password.focus();
+                    find_account_user_password.focus();
                     // submit(제출)을 취소한다.
                     return false;
                     // 비밀번호 값과 비밀번호 확인 값이 서로 같지 않으면,
-                } else if (find_account_new_password.val() != find_account_new_password_confirm.val()) {
+                } else if (find_account_user_password.val() != find_account_user_password_confirm.val()) {
                     // 경고창 출력 후,
                     alert("PASSWORD and PASSWORD CONFIRM do not match.");
                     // 비밀번호 확인 입력 input 태그에 포커스를 주고,
-                    find_account_new_password_confirm.focus();
+                    find_account_user_password_confirm.focus();
                     // submit(제출)을 취소한다.
                     return false;
                 }

@@ -70,6 +70,11 @@
              type: 'get'
          },
          {
+             method_file_path: '../routes/route_files/find_account_post',
+             path: '/find_account',
+             type: 'post'
+         },
+         {
              method_file_path: '../routes/route_files/signup_page_get',
              path: '/signup_page',
              type: 'get'

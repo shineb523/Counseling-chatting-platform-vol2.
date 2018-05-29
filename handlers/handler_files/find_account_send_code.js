@@ -1,8 +1,8 @@
 var database = require('../../database/database_loader');
 var nodemailer = require('nodemailer');
 
-var email_overlap_check_and_send_mail= function(params, callback) {
-    console.log('jsonRPC email_overlap_check_and_send_mail 호출됨.');
+var find_account_send_code= function(params, callback) {
+    console.log('jsonRPC find_account_send_code 호출됨.');
     console.dir(params);
 
     if (database) {
@@ -18,10 +18,10 @@ var email_overlap_check_and_send_mail= function(params, callback) {
     var output = new Array();
     // 등록된 사용자가 이미 있는 경우
 
-    var signup_user_email = params[0];
+    var find_account_user_email = params[0];
 
     database.user_account_model.findOne({
-        'email': signup_user_email
+        'email': find_account_user_email
     }, function(err, user) {
         if (err) {
             console.log(err);
@@ -34,14 +34,14 @@ var email_overlap_check_and_send_mail= function(params, callback) {
                 return;
         }
 
-        if (user) {
-            console.log('이미 아이디가 존재함.');
+        if (!user) {
+            // 기존에 등록된 아이디가 없는 경우
+            console.log('가입되지 않은 이메일.');
+            output[0] = 'x';
+        } else {
+            console.log('이메일이 존재함.');
             console.log('user : ', user);
             output[0] = 'o';
-        } else {
-            // 기존에 등록된 아이디가 없는 경우
-            console.log('아이디가 존재하지 않음.');
-            output[0] = 'x';
 
             function makeCode()
             {
@@ -69,7 +69,7 @@ var email_overlap_check_and_send_mail= function(params, callback) {
 
             var mailOptions = {
                 from: 'rschbh12@gmail.com',
-                to: signup_user_email,
+                to: find_account_user_email,
                 subject: 'CP email confirm CODE.',
                 text: email_text
             };
@@ -99,4 +99,4 @@ var email_overlap_check_and_send_mail= function(params, callback) {
 
 };
 
-module.exports = email_overlap_check_and_send_mail;
+module.exports = find_account_send_code;
