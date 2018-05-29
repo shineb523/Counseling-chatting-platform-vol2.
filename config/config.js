@@ -100,6 +100,26 @@
              type: 'post'
          },
          {
+             method_file_path: '../routes/route_files/current_password_confirm_withdrawal_page_get',
+             path: '/current_password_confirm_withdrawal_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/current_password_confirm_fail_withdrawal_page_get',
+             path: '/current_password_confirm_fail_withdrawal_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/current_password_confirm_withdrawal_post',
+             path: '/current_password_confirm_withdrawal',
+             type: 'post'
+         },
+         {
+             method_file_path: '../routes/route_files/withdrawal_reason_page_get',
+             path: '/withdrawal_reason_page',
+             type: 'get'
+         },
+         {
              method_file_path: '../routes/route_files/change_password_page_get',
              path: '/change_password_page',
              type: 'get'

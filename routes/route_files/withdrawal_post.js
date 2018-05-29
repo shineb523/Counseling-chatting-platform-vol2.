@@ -9,13 +9,13 @@ module.exports = function(req, res) {
     // 인증 안된 경우
     if (!req.user) {
         console.log('사용자 인증 안된 상태임.');
-        res.redirect('/index_signin');
+        res.redirect('/index_not_signed_in_page');
         return;
     } else {
 
         if (!req.session.check_withdrawal) {
             console.log('현재 비밀번호 확인되지 않음.');
-            res.redirect('/current_password_confirm_withdrawal');
+            res.redirect('/current_password_confirm_withdrawal_page');
             return;
         }
 
@@ -28,7 +28,7 @@ module.exports = function(req, res) {
             console.log('데이터베이스 연결 성공.');
 
             database.user_account_model.update({
-                id: req.user.id
+                email: req.user.email
             }, {
                 $set: {
                     withdrawal_at: Date.now(),
@@ -37,7 +37,7 @@ module.exports = function(req, res) {
             }, function(err, result) {
                 if (err) {
                     console.log('update 함수 사용 중 에러');
-                    res.redirect('/error');
+                    res.redirect('/error_page');
                     return;
                 }
                 console.log(result);
@@ -74,12 +74,11 @@ module.exports = function(req, res) {
 
         } else {
             console.log('데이터베이스 연결 실패.');
-            res.redirect('/error');
+            res.redirect('/database_connect_error_page');
             return;
         }
 
-        req.logout();
-        res.redirect('/withdrawal_success');
+        res.redirect('/withdrawal_success_page');
         return;
     }
 }
