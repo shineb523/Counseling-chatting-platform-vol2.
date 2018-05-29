@@ -38,6 +38,8 @@ var find_account_send_code= function(params, callback) {
             // 기존에 등록된 아이디가 없는 경우
             console.log('가입되지 않은 이메일.');
             output[0] = 'x';
+            callback(null, output);
+            return;
         } else {
             console.log('이메일이 존재함.');
             console.log('user : ', user);
@@ -89,11 +91,12 @@ var find_account_send_code= function(params, callback) {
                     output[1]=code;
                     output[2]=mailing_bool;
                     console.log('output : ', output);
+                    callback(null, output);
+                    return;
                 }
             });
 
         }
-        callback(null, output);
 
     });
 

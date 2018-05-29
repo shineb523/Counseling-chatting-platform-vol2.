@@ -38,6 +38,8 @@ var email_overlap_check_and_send_mail= function(params, callback) {
             console.log('이미 아이디가 존재함.');
             console.log('user : ', user);
             output[0] = 'o';
+            callback(null, output);
+            return;
         } else {
             // 기존에 등록된 아이디가 없는 경우
             console.log('아이디가 존재하지 않음.');
@@ -89,11 +91,12 @@ var email_overlap_check_and_send_mail= function(params, callback) {
                     output[1]=code;
                     output[2]=mailing_bool;
                     console.log('output : ', output);
+                    callback(null, output);
+                    return;
                 }
             });
 
         }
-        callback(null, output);
 
     });
 
