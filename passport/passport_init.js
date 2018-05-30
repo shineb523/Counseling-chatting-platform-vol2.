@@ -72,13 +72,13 @@ module.exports = function(app, router, passport) {
             var withdrawal_time_remaining_result = "";
 
             if (withdrawal_time_remaining_days_int >= 1) {
-                withdrawal_time_remaining_result += (withdrawal_time_remaining_days_int + "일 ");
+                withdrawal_time_remaining_result += (withdrawal_time_remaining_days_int + "days ");
             }
 
             if (withdrawal_time_remaining_hours_int >= 1) {
-                withdrawal_time_remaining_result += (withdrawal_time_remaining_hours_int + "시간 ");
+                withdrawal_time_remaining_result += (withdrawal_time_remaining_hours_int + "hours ");
             }
-            withdrawal_time_remaining_result += (withdrawal_time_remaining_minutes_int + "분 ");
+            withdrawal_time_remaining_result += (withdrawal_time_remaining_minutes_int + "minutes ");
 
             console.log('withdrawal_time_remaining_result', withdrawal_time_remaining_result);
 

@@ -44,6 +44,14 @@ Schema.createSchema = function(mongoose) {
             type: Boolean,
             required: true,
             'default': false
+        },
+        withdrawal_reason_selected: {
+            type: String,
+            'default': ''
+        },
+        withdrawal_reason_text: {
+            type: String,
+            'default': ''
         }
     });
 

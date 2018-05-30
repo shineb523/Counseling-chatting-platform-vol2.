@@ -16,13 +16,6 @@
              modelName: 'user_account_model'
          },
          {
-             file: './user_withdrawal_reason_schema',
-             collection: 'withdrawal_reasons',
-             specified_collection_name: 'withdrawal_reasons',
-             schemaName: 'user_withdrawal_reason_schema',
-             modelName: 'user_withdrawal_reason_model'
-         },
-         {
              file: './counselor_article_schema',
              collection: 'counselor_articles',
              specified_collection_name: 'counselor_articles',
@@ -118,6 +111,21 @@
              method_file_path: '../routes/route_files/withdrawal_reason_page_get',
              path: '/withdrawal_reason_page',
              type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/withdrawal_success_page_get',
+             path: '/withdrawal_success_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/already_withdrawn_account_page_get',
+             path: '/already_withdrawn_account_page',
+             type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/withdrawal_post',
+             path: '/withdrawal',
+             type: 'post'
          },
          {
              method_file_path: '../routes/route_files/change_password_page_get',

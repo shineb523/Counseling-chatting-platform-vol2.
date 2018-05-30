@@ -27,12 +27,19 @@ module.exports = function(req, res) {
         if (database.db) {
             console.log('데이터베이스 연결 성공.');
 
+            var withdrawal_reason_selected_post = req.body.withdrawal_reason_selected;
+            console.log('withdrawal_reason_selected_post', withdrawal_reason_selected_post);
+            var withdrawal_reason_text_post = req.body.withdrawal_reason_text;
+            console.log('withdrawal_reason_text_post', withdrawal_reason_text_post);
+
             database.user_account_model.update({
                 email: req.user.email
             }, {
                 $set: {
                     withdrawal_at: Date.now(),
-                    withdrawal_boolean: true
+                    withdrawal_boolean: true,
+                    withdrawal_reason_selected: withdrawal_reason_selected_post,
+                    withdrawal_reason_text: withdrawal_reason_text_post
                 }
             }, function(err, result) {
                 if (err) {
@@ -43,34 +50,6 @@ module.exports = function(req, res) {
                 console.log(result);
                 console.log('회원탈퇴 삭제 날짜, 회원탈퇴 유무 업데이트 완료.');
             });
-
-            var withdrawal_reason_selected_post = req.body.withdrawal_reason_selected;
-            console.log('withdrawal_reason_selected_post', withdrawal_reason_selected_post);
-            var withdrawal_reason_text_post = req.body.withdrawal_reason_text;
-            console.log('withdrawal_reason_text_post', withdrawal_reason_text_post);
-
-            if (withdrawal_reason_selected_post == 'e') {
-                var tmp_model = new database.user_withdrawal_reason_model({
-                    'withdrawal_reason_selected': withdrawal_reason_selected_post,
-                    'withdrawal_reason_text': withdrawal_reason_text_post
-                });
-                tmp_model.save(function(err) {
-                    if (err) {
-                        throw err;
-                    }
-                });
-            } else {
-                var tmp_model = new database.user_withdrawal_reason_model({
-                    'withdrawal_reason_selected': withdrawal_reason_selected_post,
-                    'withdrawal_reason_text': "none"
-                });
-                tmp_model.save(function(err) {
-                    if (err) {
-                        throw err;
-                    }
-                });
-
-            }
 
         } else {
             console.log('데이터베이스 연결 실패.');
