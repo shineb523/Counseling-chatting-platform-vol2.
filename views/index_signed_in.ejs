@@ -34,6 +34,16 @@
                 margin-top: 9px;
                 margin-bottom: 2px;
             }
+            #my_page_box {
+                margin-top: 26px;
+                margin-bottom: 100px;
+                width: 66%;
+            }
+            .my_page_menu {
+                height: 42px;
+                line-height: 28px;
+                font-size: 16px;
+            }
             .btn-outline-primary:not(:disabled):not(.disabled).active,
             .btn-outline-primary:not(:disabled):not(.disabled):active,
             .show>.btn-outline-primary.dropdown-toggle {
@@ -88,6 +98,16 @@
                 margin-right: 15px;
                 margin-top: 9px;
                 margin-bottom: 2px;
+            }
+            #my_page_box {
+                margin-top: 27px;
+                margin-bottom: 100px;
+                width: 66%;
+            }
+            .my_page_menu {
+                height: 42px;
+                line-height: 28px;
+                font-size: 17px;
             }
             .btn-outline-primary:not(:disabled):not(.disabled).active,
             .btn-outline-primary:not(:disabled):not(.disabled):active,
@@ -144,6 +164,16 @@
                 margin-top: 9px;
                 margin-bottom: 2px;
             }
+            #my_page_box {
+                margin-top: 38px;
+                margin-bottom: 100px;
+                width: 66%;
+            }
+            .my_page_menu {
+                height: 42px;
+                line-height: 28px;
+                font-size: 17px;
+            }
             .btn-outline-primary:not(:disabled):not(.disabled).active,
             .btn-outline-primary:not(:disabled):not(.disabled):active,
             .show>.btn-outline-primary.dropdown-toggle {
@@ -197,6 +227,16 @@
                 margin-right: 15px;
                 margin-top: 9px;
                 margin-bottom: 2px;
+            }
+            #my_page_box {
+                margin-top: 39px;
+                margin-bottom: 100px;
+                width: 52%;
+            }
+            .my_page_menu {
+                height: 43px;
+                line-height: 30px;
+                font-size: 17px;
             }
             .btn-outline-primary:not(:disabled):not(.disabled).active,
             .btn-outline-primary:not(:disabled):not(.disabled):active,
@@ -259,6 +299,9 @@
                 text-align: center;
                 padding: 6px 7px;
             }
+            #my_page_box {
+                margin-top: 11px;
+            }
             .btn-outline-primary:not(:disabled):not(.disabled).active,
             .btn-outline-primary:not(:disabled):not(.disabled):active,
             .show>.btn-outline-primary.dropdown-toggle {
@@ -319,6 +362,9 @@
             .nav-link {
                 text-align: center;
             }
+            #my_page_box {
+                margin-top: 11px;
+            }
         }
 
         /* Extra large devices (large desktops, 1200px and up) */
@@ -353,6 +399,9 @@
                 text-align: center;
                 margin-left: 0px;
             }
+            #my_page_box {
+                margin-top: 11px;
+            }
         }
 
         /* Extra large devices (super desktops, 2560px and up) */
@@ -385,8 +434,11 @@
                 text-align: center;
                 margin-left: 0px;
             }
-
+            #my_page_box {
+                margin-top: 11px;
+            }
         }
+
         #find_account {
             text-align: center;
         }
@@ -483,9 +535,14 @@
                         sequi nisi necessitatibus nulla corrupti aliquid, culpa eaque possimus delectus nam voluptatum cumque iste adipisci, explicabo ab maiores veritatis voluptatem! Facilis, eos tempore sit. Dolor, molestiae, excepturi? Dicta vitae
                         repellat maxime nulla modi accusamus fugit suscipit, officiis sed eligendi. Quibusdam iure temporibus ipsa illo optio deleniti provident eaque enim.</div>
                     <div class="tab-pane fade" id="v-pills-mypage" role="tabpanel" aria-labelledby="v-pills-mypage-tab">
-                        <a href="/logout">Logout</a>
-                        <a href="/current_password_confirm_changepwd_page">Change password</a>
-                        <a href="current_password_confirm_withdrawal_page">Withdrawal</a>
+                        <div id="my_page_box" class="btn-group-vertical" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary my_page_menu">Counselor</a>
+                            <a href="#" class="btn btn-outline-secondary my_page_menu">Client</a>
+                            <a href="#" class="btn btn-outline-secondary my_page_menu">My information</a>
+                            <a href="/logout" class="btn btn-outline-secondary my_page_menu">Logout</a>
+                            <a href="/current_password_confirm_changepwd_page" class="btn btn-outline-secondary my_page_menu">Change password</a>
+                            <a href="current_password_confirm_withdrawal_page" class="btn btn-outline-secondary my_page_menu">Withdrawal</a>
+                        </div>
                     </div>
                 </div>
             </main>
