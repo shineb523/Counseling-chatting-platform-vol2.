@@ -15,12 +15,7 @@ module.exports = function(req, res) {
             return;
     }
 
-    if(req.session.check_changepwd!=true){
-            res.redirect('/current_password_confirm_changepwd_page');
-            return;
-    }
-
-    console.log('/change_password_page path is called.');
-    res.render('change_password.ejs');
+    console.log('/post_consultation_page path is called.');
+    res.render('post_consultation.ejs');
     return;
 }

@@ -156,6 +156,11 @@
              method_file_path: '../routes/route_files/error_page_get',
              path: '/error_page',
              type: 'get'
+         },
+         {
+             method_file_path: '../routes/route_files/post_consultation_page_get',
+             path: '/post_consultation_page',
+             type: 'get'
          }
 
      ],
