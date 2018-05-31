@@ -123,6 +123,11 @@
              type: 'get'
          },
          {
+             method_file_path: '../routes/route_files/withdrawal_cancel_success_page_get',
+             path: '/withdrawal_cancel_success_page',
+             type: 'get'
+         },
+         {
              method_file_path: '../routes/route_files/withdrawal_post',
              path: '/withdrawal',
              type: 'post'

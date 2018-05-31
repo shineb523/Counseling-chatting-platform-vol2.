@@ -1,7 +1,7 @@
-// If a user signup successfully, render signup_success.ejs with object of user.
+// 상담자 선택 시, 방 생성 페이지로 이동
 module.exports = function(req, res) {
 
-    console.log('/signup_success_page path is called.');
+    console.log('/withdrawal_cancel 패스 요청됨.');
 
     // 인증 안된 경우
     if (!req.user) {
@@ -31,9 +31,8 @@ module.exports = function(req, res) {
                 }
                 console.log(result);
                 console.log('회원탈퇴 유무 업데이트 완료.');
-                res.render('signup_success.ejs', {
-                    user: req.user
-                });
+
+                res.render('withdrawal_cancel_success.ejs', user: req.user);
                 return;
             });
 

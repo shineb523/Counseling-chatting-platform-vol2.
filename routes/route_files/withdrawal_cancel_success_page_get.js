@@ -1,7 +1,7 @@
 // 회원탈퇴 확인 시, 로그인 계정 데이터의 탈퇴 시간 저장, 탈퇴 여부 true로 변경.
 module.exports = function(req, res) {
 
-    console.log('/withdrawal 패스 요청됨.');
+    console.log('/withdrawal_cancel_success_page path is called.');
 
     console.log('req.user의 정보');
     console.dir(req.user);
@@ -13,33 +13,18 @@ module.exports = function(req, res) {
         return;
     } else {
 
-        if (!req.session.check_withdrawal) {
-            console.log('현재 비밀번호 확인되지 않음.');
-            res.redirect('/current_password_confirm_withdrawal_page');
-            return;
-        }
-
         console.log('사용자 인증된 상태임.');
-		console.log('req.session : ', req.session);
 
         var database = req.app.get('database');
 
         if (database.db) {
             console.log('데이터베이스 연결 성공.');
 
-            var withdrawal_reason_selected_post = req.body.withdrawal_reason_selected;
-            console.log('withdrawal_reason_selected_post', withdrawal_reason_selected_post);
-            var withdrawal_reason_text_post = req.body.withdrawal_reason_text;
-            console.log('withdrawal_reason_text_post', withdrawal_reason_text_post);
-
             database.user_account_model.update({
                 email: req.user.email
             }, {
                 $set: {
-                    withdrawal_at: Date.now(),
-                    withdrawal_boolean: true,
-                    withdrawal_reason_selected: withdrawal_reason_selected_post,
-                    withdrawal_reason_text: withdrawal_reason_text_post
+                    withdrawal_boolean: false
                 }
             }, function(err, result) {
                 if (err) {
@@ -48,8 +33,8 @@ module.exports = function(req, res) {
                     return;
                 }
                 console.log(result);
-                console.log('회원탈퇴 삭제 날짜, 회원탈퇴 유무 업데이트 완료.');
-                res.redirect('/withdrawal_success_page');
+                console.log('회원탈퇴 유무 업데이트 완료.');
+                res.render('withdrawal_cancel_success.ejs', {user: req.user});
                 return;
             });
 
