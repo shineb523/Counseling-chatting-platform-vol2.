@@ -1,10 +1,3 @@
-/**
- * 데이터베이스 스키마를 정의하는 모듈
- *
- * @date 2016-11-10
- * @author Mike
- */
-
 var crypto = require('crypto');
 
 var Schema = {};
@@ -34,6 +27,52 @@ Schema.createSchema = function(mongoose) {
             type: Date,
             required: true,
             'default': Date.now()
+        },
+        counselor_posting_bool: {
+            type: Boolean,
+            required: true,
+            'default': false
+        },
+        counselor_posting_title: {
+            type: String
+        },
+        counselor_posting_registrant_type: {
+            type: String
+        },
+        counselor_posting_type_write: {
+            type: String
+        },
+        counselor_posting_contents: {
+            type: String
+        },
+        counselor_posting_created: {
+            type: String
+        },
+        counselor_posting_updated: {
+            type: String
+        },
+        client_posting_bool: {
+            type: Boolean,
+            required: true,
+            'default': false
+        },
+        client_posting_title: {
+            type: String
+        },
+        client_posting_registrant_type: {
+            type: String
+        },
+        client_posting_type_write: {
+            type: String
+        },
+        client_posting_contents: {
+            type: String
+        },
+        client_posting_created: {
+            type: String
+        },
+        client_posting_updated: {
+            type: String
         },
         withdrawal_at: {
             type: Date,
