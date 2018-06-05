@@ -19,12 +19,12 @@ Schema.createSchema = function(mongoose) {
             type: String,
             required: true
         },
-        created_at: {
+        account_created_at: {
             type: Date,
             required: true,
             default: Date.now()
         },
-        updated_at: {
+        account_updated_at: {
             type: Date,
             required: true,
             default: Date.now()

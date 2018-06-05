@@ -18,17 +18,14 @@
                 margin-bottom: 21px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 85%;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -71,17 +68,14 @@
                 margin-bottom: 21px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 85%;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -124,17 +118,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 85%;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -177,17 +168,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 85%;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -230,17 +218,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 430px;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -283,17 +268,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 430px;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -308,17 +290,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 430px;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -334,17 +313,14 @@
                 margin-bottom: 30px;
                 text-align: center;
             }
-            #post_consultation_form{
+            #post_counselor_form{
                 display: flex;
                 flex-direction: column;
                 margin-left: auto;
                 margin-right: auto;
                 width: 430px;
             }
-            #post_consultation_registrant_type{
-                text-align-last: center;
-            }
-            #post_consultation_button{
+            #post_counselor_button{
                 margin-top: 15px;
                 margin-bottom: 150px;
             }
@@ -352,32 +328,25 @@
 
         /* No media query since the extra-large breakpoint has no upper bound on its width */
     </style>
-    <title>Post consultation</title>
+    <title>Counselor registration</title>
 </head>
 <body>
 
-    <div id="title">Post consultation</div>
-    <form  id="post_consultation_form" method="post" action="/post_consultation" >
+    <div id="title">Counselor registration</div>
+    <form  id="post_counselor_form" method="post" action="/post_counselor" >
         <div class="form-group">
-            <label for="post_consultation_title">Title</label>
-            <input type="text" id="post_consultation_title" class="form-control" name="post_consultation_title">
+            <label for="post_counselor_title">Title</label>
+            <input type="text" id="post_counselor_title" class="form-control" name="post_counselor_title" >
         </div>
         <div class="form-group">
-            <label for="post_consultation_registrant_type">Registrant type</label>
-            <select id="post_consultation_registrant_type" class="form-control" name="post_consultation_registrant_type">
-                <option value="counselor" selected="selected">Counselor</option>
-                <option value="client">Client</option>
-            </select>
+            <label for="post_counselor_type_write">Consultation type</label>
+            <input type="text" id="post_counselor_type_write" class="form-control" name="post_counselor_type_write" placeholder="Love, study, career, depression, etc.">
         </div>
         <div class="form-group">
-            <label for="post_consultation_type_write">Consultation type</label>
-            <input type="text" id="post_consultation_type_write" class="form-control" name="post_consultation_type_write" placeholder="Love, study, career, depression, etc.">
+            <label for="post_counselor_contents">Registration contents</label>
+            <textarea id="post_counselor_contents" class="form-control" name="post_counselor_contents" rows="10" placeholder="Self introduction, career, education, qualification, professional counseling field, counseling price, SNS account ID to consult, etc."></textarea>
         </div>
-        <div class="form-group">
-            <label for="post_consultation_contents">Registration contents</label>
-            <textarea id="post_consultation_contents" class="form-control" name="post_consultation_contents" rows="10" placeholder="Self introduction, career, education, qualification, professional counseling field, counseling price, sns account id to consult, etc."></textarea>
-        </div>
-        <button id="post_consultation_button" class="btn btn-outline-secondary" type="submit">Post</button>
+        <button id="post_counselor_button" class="btn btn-outline-secondary" type="submit">Post</button>
     </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -388,26 +357,26 @@
         (jQuery)(function($) {
             console.log($("#withdrawal_reason_selected option:selected").val());
 
-            $('#post_consultation_form').submit(function() {
-                if($('#post_consultation_title').val().length < 10){
+            $('#post_counselor_form').submit(function() {
+                if($('#post_counselor_title').val().length < 10){
                     // 경고창 출력 후,
                     alert("Please enter a title of at least 10 characters.");
                     // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
-                    $('#post_consultation_title').focus();
+                    $('#post_counselor_title').focus();
                     // submit(제출)을 취소한다.
                     return false;
-                }else if($('#post_consultation_type_write').val().length < 10){
+                }else if($('#post_counselor_type_write').val().length < 10){
                     // 경고창 출력 후,
                     alert("Please enter a consultation type of at least 10 characters.");
                     // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
-                    $('#post_consultation_type_write').focus();
+                    $('#post_counselor_type_write').focus();
                     // submit(제출)을 취소한다.
                     return false;
-                }else if($('#post_consultation_contents').val().length < 50){
+                }else if($('#post_counselor_contents').val().length < 50){
                     // 경고창 출력 후,
                     alert("Please enter a registration contents of at least 50 characters.");
                     // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
-                    $('#post_consultation_contents').focus();
+                    $('#post_counselor_contents').focus();
                     // submit(제출)을 취소한다.
                     return false;
                 }
