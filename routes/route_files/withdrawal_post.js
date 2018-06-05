@@ -53,6 +53,20 @@ module.exports = function(req, res) {
                 return;
             });
 
+            var tmp = new database.withdrawal_reason_model({
+                withdrawal_email: req.user.email,
+                withdrawal_at: Date.now(),
+                withdrawal_reason_selected: withdrawal_reason_selected_post,
+                withdrawal_reason_text: withdrawal_reason_text_post
+            });
+
+            tmp.save(function(err) {
+                if (err) {
+                    throw err;
+                }
+                console.log("withdrawal_reason_model 객체 database에 저장.");
+            });
+
         } else {
             console.log('데이터베이스 연결 실패.');
             res.redirect('/database_connect_error_page');

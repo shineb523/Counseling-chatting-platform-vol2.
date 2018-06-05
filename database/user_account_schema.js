@@ -8,7 +8,8 @@ Schema.createSchema = function(mongoose) {
     var user_account_schema = mongoose.Schema({
         email: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         hashed_password: {
             type: String,
@@ -21,22 +22,19 @@ Schema.createSchema = function(mongoose) {
         created_at: {
             type: Date,
             required: true,
-            'default': Date.now()
+            default: Date.now()
         },
         updated_at: {
             type: Date,
             required: true,
-            'default': Date.now()
+            default: Date.now()
         },
         counselor_posting_bool: {
             type: Boolean,
             required: true,
-            'default': false
+            default: false
         },
         counselor_posting_title: {
-            type: String
-        },
-        counselor_posting_registrant_type: {
             type: String
         },
         counselor_posting_type_write: {
@@ -46,20 +44,17 @@ Schema.createSchema = function(mongoose) {
             type: String
         },
         counselor_posting_created: {
-            type: String
+            type: Date
         },
         counselor_posting_updated: {
-            type: String
+            type: Date
         },
         client_posting_bool: {
             type: Boolean,
             required: true,
-            'default': false
+            default: false
         },
         client_posting_title: {
-            type: String
-        },
-        client_posting_registrant_type: {
             type: String
         },
         client_posting_type_write: {
@@ -69,28 +64,28 @@ Schema.createSchema = function(mongoose) {
             type: String
         },
         client_posting_created: {
-            type: String
+            type: Date
         },
         client_posting_updated: {
-            type: String
-        },
-        withdrawal_at: {
-            type: Date,
-            required: true,
-            'default': Date.now()
+            type: Date
         },
         withdrawal_boolean: {
             type: Boolean,
             required: true,
-            'default': false
+            default: false
         },
         withdrawal_reason_selected: {
             type: String,
-            'default': ''
+            default: ''
         },
         withdrawal_reason_text: {
             type: String,
-            'default': ''
+            default: ''
+        },
+        withdrawal_at: {
+            type: Date,
+            required: true,
+            default: Date.now()
         }
     });
 

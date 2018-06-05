@@ -8,7 +8,7 @@
  * @author Mike
  */
 
-var local_login = require('./passport_files/local_login');
+var local_signin = require('./passport_files/local_signin');
 var local_signup = require('./passport_files/local_signup');
 
 module.exports = function(app, router, passport) {
@@ -37,7 +37,7 @@ module.exports = function(app, router, passport) {
     });
 
     // 인증방식 설정
-    passport.use('local-login', local_login);
+    passport.use('local-login', local_signin);
     passport.use('local-signup', local_signup);
 
     console.log('2가지 passport 인증방식 설정됨.');

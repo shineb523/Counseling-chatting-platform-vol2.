@@ -16,18 +16,25 @@
              modelName: 'user_account_model'
          },
          {
-             file: './counselor_article_schema',
-             collection: 'counselor_articles',
-             specified_collection_name: 'counselor_articles',
-             schemaName: 'counselor_article_schema',
-             modelName: 'counselor_article_model'
+             file: './withdrawal_reason_schema',
+             collection: 'withdrawal_reasons',
+             specified_collection_name: 'withdrawal_reasons',
+             schemaName: 'withdrawal_reason_schema',
+             modelName: 'withdrawal_reason_model'
          },
          {
-             file: './client_article_schema',
-             collection: 'client_articles',
-             specified_collection_name: 'client_articles',
-             schemaName: 'client_article_schema',
-             modelName: 'client_article_model'
+             file: './counselor_posting_schema',
+             collection: 'counselor_postings',
+             specified_collection_name: 'counselor_postings',
+             schemaName: 'counselor_posting_schema',
+             modelName: 'counselor_posting_model'
+         },
+         {
+             file: './client_posting_schema',
+             collection: 'client_postings',
+             specified_collection_name: 'client_postings',
+             schemaName: 'client_posting_schema',
+             modelName: 'client_posting_model'
          }
      ],
 
