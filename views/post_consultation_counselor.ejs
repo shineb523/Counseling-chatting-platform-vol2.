@@ -353,7 +353,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script>
         (jQuery)(function($) {
-            console.log($("#withdrawal_reason_selected option:selected").val());
+            var post_counselor_record_tmp = <%= post_counselor_record_rendering %>
+            var post_counselor_title_tmp = <%= post_counselor_title_rendering %>
+            var post_counselor_type_write_tmp = <%= post_counselor_type_write_rendering %>
+            var post_counselor_contents_tmp = <%= post_counselor_contents_rendering %>
+            console.log('post_counselor_record : ', post_counselor_record_tmp);
+            console.log('post_counselor_title_tmp : ', post_counselor_title_tmp);
+            console.log('post_counselor_type_write_tmp : ', post_counselor_type_write_tmp);
+            console.log('post_counselor_contents_tmp : ', post_counselor_contents_tmp);
+
+            if(post_counselor_record_tmp){
+                $('#post_counselor_title').val('post_counselor_title_tmp');
+                $('#post_counselor_type_write').val('post_counselor_type_write_tmp');
+                $('#post_counselor_contents').val('post_counselor_contents_tmp');
+            }
 
             $('#post_counselor_form').submit(function() {
                 if($('#post_counselor_title').val().length < 10){

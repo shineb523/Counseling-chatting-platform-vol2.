@@ -353,7 +353,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script>
         (jQuery)(function($) {
-            console.log($("#withdrawal_reason_selected option:selected").val());
+
+            var post_client_record_tmp = <%= post_client_record_rendering %>
+            var post_client_title_tmp = <%= post_client_title_rendering %>
+            var post_client_type_write_tmp = <%= post_client_type_write_rendering %>
+            var post_client_contents_tmp = <%= post_client_contents_rendering %>
+            console.log('post_client_record : ', post_client_record_tmp);
+            console.log('post_client_title_tmp : ', post_client_title_tmp);
+            console.log('post_client_type_write_tmp : ', post_client_type_write_tmp);
+            console.log('post_client_contents_tmp : ', post_client_contents_tmp);
+
+            if(post_client_record_tmp){
+                $('#post_client_title').val('post_client_title_tmp');
+                $('#post_client_type_write').val('post_client_type_write_tmp');
+                $('#post_client_contents').val('post_client_contents_tmp');
+            }
 
             $('#post_client_form').submit(function() {
                 if($('#post_client_title').val().length < 10){
