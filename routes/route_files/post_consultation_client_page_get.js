@@ -15,7 +15,7 @@ module.exports = function(req, res) {
             return;
     }
 
-    console.log('/post_consultation_page path is called.');
-    res.render('post_consultation.ejs');
+    console.log('/post_consultation_client_page path is called.');
+    res.render('post_consultation_client.ejs');
     return;
 }

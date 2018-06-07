@@ -165,13 +165,24 @@
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/post_consultation_page_get',
-             path: '/post_consultation_page',
+             method_file_path: '../routes/route_files/post_consultation_client_page_get',
+             path: '/post_consultation_client_page',
              type: 'get'
          },
          {
-             method_file_path: '../routes/route_files/post_consultation_post',
-             path: '/post_consultation',
+             method_file_path: '../routes/route_files/post_consultation_client_post',
+             path: '/post_consultation_client',
+             type: 'post'
+         },
+         {
+             method_file_path: '../routes/route_files/post_consultation_counselor_page_get',
+             path: '/post_consultation_counselor_page',
+             type: 'get'
+         }
+         ,
+         {
+             method_file_path: '../routes/route_files/post_consultation_counselor_post',
+             path: '/post_consultation_counselor',
              type: 'post'
          }
 
