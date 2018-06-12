@@ -35,19 +35,24 @@ Schema.createSchema = function(mongoose) {
             default: false
         },
         counselor_posting_title: {
-            type: String
+            type: String,
+            default: ''
         },
         counselor_posting_type_write: {
-            type: String
+            type: String,
+            default: ''
         },
         counselor_posting_contents: {
-            type: String
+            type: String,
+            default: ''
         },
         counselor_posting_created: {
-            type: Date
+            type: Date,
+            default: ''
         },
         counselor_posting_updated: {
-            type: Date
+            type: Date,
+            default: ''
         },
         client_posting_bool: {
             type: Boolean,
@@ -55,13 +60,16 @@ Schema.createSchema = function(mongoose) {
             default: false
         },
         client_posting_title: {
-            type: String
+            type: String,
+            default: ''
         },
         client_posting_type_write: {
-            type: String
+            type: String,
+            default: ''
         },
         client_posting_contents: {
-            type: String
+            type: String,
+            default: ''
         },
         client_posting_created: {
             type: Date

@@ -41,7 +41,7 @@ module.exports = function(req, res) {
                 $set: {
                     hashed_password: tmp.hashed_password,
                     salt: tmp.salt,
-                    updated_at: tmp.created_at
+                    account_updated_at: tmp.created_at
                 }
             }, function(err, result) {
                 if (err) {

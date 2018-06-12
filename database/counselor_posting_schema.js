@@ -8,25 +8,19 @@ Schema.createSchema = function(mongoose) {
     var counselor_posting_schema = mongoose.Schema({
         counselor_posting_email: {
             type: String,
-            required: true,
             unique: true
         },
         counselor_posting_title: {
-            type: String,
-            required: true
+            type: String
         },
         counselor_posting_type_write: {
-            type: String,
-            required: true
+            type: String
         },
         counselor_posting_contents: {
-            type: String,
-            required: true
+            type: String
         },
         counselor_posting_created: {
-            type: Date,
-            required: true,
-            default: Date.now()
+            type: Date
         },
         counselor_posting_updated: {
             type: Date

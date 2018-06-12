@@ -371,25 +371,16 @@
 
             $('#post_client_form').submit(function() {
                 if($('#post_client_title').val().length < 10){
-                    // 경고창 출력 후,
                     alert("Please enter a title of at least 10 characters.");
-                    // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
                     $('#post_client_title').focus();
-                    // submit(제출)을 취소한다.
                     return false;
                 }else if($('#post_client_type_write').val().length < 10){
-                    // 경고창 출력 후,
                     alert("Please enter a consultation type of at least 10 characters.");
-                    // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
                     $('#post_client_type_write').focus();
-                    // submit(제출)을 취소한다.
                     return false;
                 }else if($('#post_client_contents').val().length < 50){
-                    // 경고창 출력 후,
                     alert("Please enter a registration contents of at least 50 characters.");
-                    // 탈퇴 사유 텍스트 입력 input에 포커스를 주고,
                     $('#post_client_contents').focus();
-                    // submit(제출)을 취소한다.
                     return false;
                 }
             });

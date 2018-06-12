@@ -14,101 +14,67 @@ module.exports = function(req, res) {
     } else {
 
         console.log('사용자 인증된 상태임.');
-		console.log('req.session : ', req.session);
+        console.log('req.session : ', req.session);
 
         var database = req.app.get('database');
 
         if (database.db) {
             console.log('데이터베이스 연결 성공.');
 
-            var post_consultation_title_tmp = req.body.post_consultation_title;
-            var post_consultation_registrant_type_tmp = req.body.post_consultation_registrant_type;
-            var post_consultation_type_write_tmp = req.body.post_consultation_type_write;
-            var post_consultation_contents_tmp = req.body.post_consultation_contents;
+            var post_counselor_title_tmp = req.body.post_counselor_title;
+            var post_counselor_type_write_tmp = req.body.post_counselor_type_write;
+            var post_counselor_contents_tmp = req.body.post_counselor_contents;
 
-            if(post_consultation_registrant_type_tmp=='counselor'){
+            var counselor_posting_model_tmp = new database.counselor_posting_model({
+                'counselor_posting_email': req.user.email,
+                'counselor_posting_title': post_counselor_title_tmp,
+                'counselor_posting_type_write': post_counselor_type_write_tmp,
+                'counselor_posting_contents': post_counselor_contents_tmp,
+                'counselor_posting_created': Date.now()
+            });
 
-                database.user_account_model.update({
-                    email: req.user.email
-                }, {
-                    $set: {
-                        counselor_posting_bool: true,
-                        counselor_posting_title: post_consultation_title_tmp,
-                        counselor_posting_type_write: post_consultation_type_write_tmp,
-                        counselor_posting_contents: post_consultation_contents_tmp,
-                        counselor_posting_created: Date.now()
-                    }
-                }, function(err, result) {
-                    if (err) {
-                        console.log('update 함수 사용 중 에러');
-                        res.redirect('/error_page');
-                        return;
-                    }
-                    console.log(result);
-                    console.log('Posted successfully.');
-                });
+            database.user_account_model.findOne({
+                'email': signup_user_email
+            }, function(err, user) {
+                // 에러 발생 시
+                if (err) {
+                    console.log('update 함수 사용 중 에러');
+                    res.redirect('/error_page');
+                    return;
+                }
 
-                database.counselor_posting_model.update({
-                    email: req.user.email
-                }, {
-                    $set: {
-                        counselor_posting_email: req.user.email,
-                        counselor_posting_title: post_consultation_title_tmp,
-                        counselor_posting_type_write: post_consultation_type_write_tmp,
-                        counselor_posting_contents: post_consultation_contents_tmp,
-                        counselor_posting_created: Date.now()
-                    }
-                }, function(err, result) {
-                    if (err) {
-                        console.log('update 함수 사용 중 에러');
-                        res.redirect('/error_page');
-                        return;
-                    }
-                    console.log(result);
-                    console.log('Posted successfully.');
-                });
+                if (user.counselor_posting_bool == false) {
 
-            }else if(post_consultation_registrant_type_tmp=='client'){
-                database.user_account_model.update({
-                    email: req.user.email
-                }, {
-                    $set: {
-                        client_posting_bool: true,
-                        client_posting_title: post_consultation_title_tmp,
-                        client_posting_type_write: post_consultation_type_write_tmp,
-                        client_posting_contents: post_consultation_contents_tmp,
-                        client_posting_created: Date.now()
-                    }
-                }, function(err, result) {
-                    if (err) {
-                        console.log('update 함수 사용 중 에러');
-                        res.redirect('/error_page');
-                        return;
-                    }
-                    console.log(result);
-                    console.log('Posted successfully.');
-                });
+                    database.user_account_model.update({
+                        email: req.user.email
+                    }, {
+                        $set: {
+                            'counselor_posting_bool': true,
+                            'counselor_posting_title': post_counselor_title_tmp,
+                            'counselor_posting_type_write': post_counselor_type_write_tmp,
+                            'counselor_posting_contents': post_counselor_contents_tmp,
+                            'counselor_posting_created': Date.now()
+                        }
+                    }, function(err, result) {
+                        if (err) {
+                            console.log('update 함수 사용 중 에러');
+                            res.redirect('/error_page');
+                            return;
+                        }
+                        console.log(result);
+                        console.log('비밀번호 변경 완료.');
+                    });
 
-                database.client_posting_model.update({
-                    email: req.user.email
-                }, {
-                    $set: {
-                        client_posting_email: req.user.email,
-                        client_posting_title: post_consultation_title_tmp,
-                        client_posting_type_write: post_consultation_type_write_tmp,
-                        client_posting_contents: post_consultation_contents_tmp,
-                        client_posting_created: Date.now()
-                    }
-                }, function(err, result) {
-                    if (err) {
-                        console.log('update 함수 사용 중 에러');
-                        res.redirect('/error_page');
-                        return;
-                    }
-                    console.log(result);
-                    console.log('Posted successfully.');
-                });
-            }
+                    counselor_posting_model_tmp.save(function(err) {
+                        if (err) {
+                            console.log('save 함수 사용 중 에러');
+                            res.redirect('/error_page');
+                            return;
+                        }
+                    });
+                }
+            });
+
         } else {
             console.log('데이터베이스 연결 실패.');
             res.redirect('/database_connect_error_page');
