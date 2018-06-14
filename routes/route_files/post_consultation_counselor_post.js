@@ -13,6 +13,8 @@ module.exports = function(req, res) {
 
     } else {
 
+        var posting_complete_bool = 'none';
+
         console.log('사용자 인증된 상태임.');
         console.log('req.session : ', req.session);
 
@@ -25,16 +27,8 @@ module.exports = function(req, res) {
             var post_counselor_type_write_tmp = req.body.post_counselor_type_write;
             var post_counselor_contents_tmp = req.body.post_counselor_contents;
 
-            var counselor_posting_model_tmp = new database.counselor_posting_model({
-                'counselor_posting_email': req.user.email,
-                'counselor_posting_title': post_counselor_title_tmp,
-                'counselor_posting_type_write': post_counselor_type_write_tmp,
-                'counselor_posting_contents': post_counselor_contents_tmp,
-                'counselor_posting_created': Date.now()
-            });
-
             database.user_account_model.findOne({
-                'email': signup_user_email
+                'email': req.user.email
             }, function(err, user) {
                 // 에러 발생 시
                 if (err) {
@@ -62,7 +56,14 @@ module.exports = function(req, res) {
                             return;
                         }
                         console.log(result);
-                        console.log('비밀번호 변경 완료.');
+                    });
+
+                    var counselor_posting_model_tmp = new database.counselor_posting_model({
+                        'counselor_posting_email': req.user.email,
+                        'counselor_posting_title': post_counselor_title_tmp,
+                        'counselor_posting_type_write': post_counselor_type_write_tmp,
+                        'counselor_posting_contents': post_counselor_contents_tmp,
+                        'counselor_posting_created': Date.now()
                     });
 
                     counselor_posting_model_tmp.save(function(err) {
@@ -71,6 +72,63 @@ module.exports = function(req, res) {
                             res.redirect('/error_page');
                             return;
                         }
+                        console.log('Completed creating counselor posting.');
+                        posting_complete_bool='counselor_posting_created';
+                        res.render('post_consultation_counselor.ejs', {
+                            posting_complete_bool_rendering:posting_complete_bool,
+                            post_counselor_record_rendering: true,
+                            post_counselor_title_rendering: post_counselor_title_tmp,
+                            post_counselor_type_write_rendering: post_counselor_type_write_tmp,
+                            post_counselor_contents_rendering: post_counselor_contents_tmp
+                        });
+                        return;
+                    });
+                }else{
+                    database.user_account_model.update({
+                        email: req.user.email
+                    }, {
+                        $set: {
+                            'counselor_posting_title': post_counselor_title_tmp,
+                            'counselor_posting_type_write': post_counselor_type_write_tmp,
+                            'counselor_posting_contents': post_counselor_contents_tmp,
+                            'counselor_posting_updated': Date.now()
+                        }
+                    }, function(err, result) {
+                        if (err) {
+                            console.log('update 함수 사용 중 에러');
+                            res.redirect('/error_page');
+                            return;
+                        }
+                        console.log(result);
+                        console.log('Completed updating counselor posting.');
+                    });
+
+                    database.counselor_posting_model.update({
+                        counselor_posting_email: req.user.email
+                    }, {
+                        $set: {
+                            'counselor_posting_title': post_counselor_title_tmp,
+                            'counselor_posting_type_write': post_counselor_type_write_tmp,
+                            'counselor_posting_contents': post_counselor_contents_tmp,
+                            'counselor_posting_updated': Date.now()
+                        }
+                    }, function(err, result) {
+                        if (err) {
+                            console.log('update 함수 사용 중 에러');
+                            res.redirect('/error_page');
+                            return;
+                        }
+                        console.log(result);
+                        console.log('Completed updating counselor posting.');
+                        posting_complete_bool='counselor_posting_updated';
+                        res.render('post_consultation_counselor.ejs', {
+                            posting_complete_bool_rendering:posting_complete_bool,
+                            post_counselor_record_rendering: true,
+                            post_counselor_title_rendering: post_counselor_title_tmp,
+                            post_counselor_type_write_rendering: post_counselor_type_write_tmp,
+                            post_counselor_contents_rendering: post_counselor_contents_tmp
+                        });
+                        return;
                     });
                 }
             });
@@ -80,8 +138,5 @@ module.exports = function(req, res) {
             res.redirect('/database_connect_error_page');
             return;
         }
-
-        res.redirect('/change_password_success_page');
-        return;
     }
 }

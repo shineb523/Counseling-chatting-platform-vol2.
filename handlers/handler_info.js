@@ -7,5 +7,9 @@ module.exports = [{
 {
     file: './handler_files/find_account_send_code',
     method: 'find_account_send_code'
+},
+{
+    file: './handler_files/setting_posting_page_forms',
+    method: 'setting_posting_page_forms'
 }
 ];

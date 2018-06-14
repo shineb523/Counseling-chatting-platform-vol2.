@@ -33,6 +33,7 @@ module.exports = function(req, res) {
             if (result) {
                 console.log('기존 client_posting 존재.');
                 res.render('post_consultation_client.ejs', {
+                    posting_complete_bool_rendering: false,
                     post_client_record_rendering: true,
                     post_client_title_rendering: result.client_posting_title,
                     post_client_type_write_rendering: result.client_posting_type_write,
@@ -42,6 +43,7 @@ module.exports = function(req, res) {
             } else {
                 console.log('기존 counselor_posting 존재하지 않음.');
                 res.render('post_consultation_client.ejs', {
+                    posting_complete_bool_rendering: false,
                     post_client_record_rendering: false,
                     post_client_title_rendering: false,
                     post_client_type_write_rendering: false,

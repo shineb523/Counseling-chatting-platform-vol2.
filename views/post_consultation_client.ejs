@@ -353,6 +353,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script>
         (jQuery)(function($) {
+            var posting_complete_bool_tmp = '<%= posting_complete_bool_rendering %>';
 
             var post_client_record_tmp = <%= post_client_record_rendering %>
             var post_client_title_tmp = <%= post_client_title_rendering %>
@@ -368,6 +369,16 @@
                 $('#post_client_type_write').val('post_client_type_write_tmp');
                 $('#post_client_contents').val('post_client_contents_tmp');
             }
+
+            if(posting_complete_bool_tmp=='client_posting_created'){
+                alert('Successfully created client posting.');
+            }else if(posting_complete_bool_tmp=='client_posting_updated'){
+                alert('Successfully updated client posting.');
+            }
+
+
+
+
 
             $('#post_client_form').submit(function() {
                 if($('#post_client_title').val().length < 10){
