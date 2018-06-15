@@ -356,29 +356,30 @@
     <script>
         (jQuery)(function($) {
 
-            $.jsonRPC.setup({
-                endPoint: '/api',
-                namespace: ''
-            });
-
-            var setting_posting_page_forms_jsonrpc_method = 'setting_posting_page_forms';
-            var user_email = '<%= user.email %>';
-            $.jsonRPC.request(setting_posting_page_forms_jsonrpc_method, {
-                id: 003,
-                params: ['counselor', user_email],
-                success: function(data) {
-                    console.log(' jsonRPC success response is received.');
-                    console.log('data.result : ', data.result);
-                    $('#post_counselor_title').val(data.result.counselor_posting_title);
-                    $('#post_counselor_type_write').val(data.result.counselor_posting_type_write);
-                    $('#post_counselor_contents').val(data.result.counselor_posting_contents);
-                },
-                error: function(data) {
-                    console.log('jsonRPC error 응답 받음.');
-                    console.log(data.error.code + ', ' + data.error.message);
-                    window.location.href = '../views/error';
+            $(window).ready(function(){
+                if(posting_complete_bool_tmp=='counselor_posting_created'){
+                    alert('Successfully created counselor posting.');
+                }else if(posting_complete_bool_tmp=='counselor_posting_updated'){
+                    alert('Successfully updated counselor posting.');
                 }
             });
+
+            var posting_complete_bool_tmp = '<%= posting_complete_bool_rendering %>';
+            var post_counselor_record_tmp = <%= post_counselor_record_rendering %>;
+            var post_counselor_title_tmp = '<%= post_counselor_title_rendering %>';
+            var post_counselor_type_write_tmp = '<%= post_counselor_type_write_rendering %>';
+            var post_counselor_contents_tmp = '<%= post_counselor_contents_rendering %>';
+
+            console.log('posting_complete_bool_tmp : ', posting_complete_bool_tmp);
+            console.log('post_counselor_title_tmp : ', post_counselor_title_tmp);
+            console.log('post_counselor_type_write_tmp : ', post_counselor_type_write_tmp);
+            console.log('post_counselor_contents_tmp : ', post_counselor_contents_tmp);
+
+            if(post_counselor_record_tmp){
+                $('#post_counselor_title').val(post_counselor_title_tmp);
+                $('#post_counselor_type_write').val(post_counselor_type_write_tmp);
+                $('#post_counselor_contents').val(post_counselor_contents_tmp);
+            }
 
             $('#post_counselor_form').submit(function() {
                 if($('#post_counselor_title').val().length < 10){

@@ -1,9 +1,14 @@
-// 회원탈퇴 선택 시, 회원탈퇴 사유 제출 페이지로 이동
+// Rendering post_consultation_counselor.ejs.
 module.exports = function(req, res) {
 
-    // 인증 안된 경우
+    console.log('/post_consultation_counselor_page path is called.');
+
+    console.log('Information of req.user');
+    console.dir(req.user);
+
+    // If user is not authenticated.
     if (!req.user) {
-        console.log('사용자 인증 안된 상태임.');
+        console.log('User is not authenticated.');
         res.redirect('/index_not_signed_in_page');
         return;
     }
@@ -15,7 +20,47 @@ module.exports = function(req, res) {
         return;
     }
 
-    console.log('/post_consultation_counselor_page path is called.');
+    var database = req.app.get('database');
 
-    res.render('post_consultation_counselor.ejs', {user:req.user});
+    if (database.db) {
+        console.log('Successfully connected to database.');
+
+        database.user_account_model.findOne({
+            'email': req.user.email
+        }, function(err, user) {
+            // If an error occurs.
+            if (err) {
+                console.log('Error is occured while calling findOne function.');
+                res.redirect('/error_page');
+                return;
+            }
+
+            if (user.counselor_posting_bool == true) {
+                res.render('post_consultation_counselor.ejs', {
+                    posting_complete_bool_rendering: 'none',
+                    post_counselor_record_rendering: true,
+                    post_counselor_title_rendering: user.counselor_posting_title,
+                    post_counselor_type_write_rendering: user.counselor_posting_type_write,
+                    post_counselor_contents_rendering: user.counselor_posting_contents
+                });
+                return;
+            } else {
+                res.render('post_consultation_counselor.ejs', {
+                    posting_complete_bool_rendering: 'none',
+                    post_counselor_record_rendering: false,
+                    post_counselor_title_rendering: '',
+                    post_counselor_type_write_rendering: '',
+                    post_counselor_contents_rendering: ''
+                });
+                return;
+            }
+
+
+        });
+
+    } else {
+        console.log('데이터베이스 연결 실패.');
+        res.redirect('/database_connect_error_page');
+        return;
+    }
 }
